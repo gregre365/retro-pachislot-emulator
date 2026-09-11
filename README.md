@@ -98,6 +98,8 @@ Keys can be changed from the in-emulator menu (Tab).
   lockout and hall computer outputs, and the medals-in minus medals-out
   count, for developers
 
+<p align="center"><img src=".github/images/screenshot.png" alt="The Wild Cats (cabinet) view" width="400"></p>
+
 ## Building
 
 Build settings for this project are in `useroptions.mak`
@@ -301,6 +303,8 @@ CRC32 / SHA-1 が一致しない場合は、チェックサムが違うという
 - **Debug Overlay** - 表示パネルに加えて、リールセンサー、ホッパー、
   メダルブロッカー、ホールコンピューター出力の状態を LED で、投入枚数と払い出し枚数の
   差を数字で表示する開発者向け画面
+
+<p align="center"><img src=".github/images/screenshot.png" alt="Wild Cats (cabinet) の表示" width="400"></p>
 
 ## ビルド方法
 
