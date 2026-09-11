@@ -209,8 +209,7 @@ names are used only to identify the hardware being emulated; this project is
 not affiliated with or endorsed by their owners. The artwork was made for this
 project and is not taken from the original machine.
 
-The reel symbol images were generated with Gemini (Nano Banana). The other
-artwork was created with Claude Code.
+The artwork images were created with Nano Banana and Claude Code.
 
 ---
 
@@ -410,5 +409,4 @@ MAME は Gregory Ember の登録商標です。機種名とメーカー名は、
 受けたものでもありません。アートワークはこのプロジェクトのために作ったもので、
 実機の印刷物から取ったものではありません。
 
-リール図柄の画像は Gemini（Nano Banana）で生成しました。それ以外の
-アートワークは Claude Code で作成しました。
+アートワークの画像は Nano Banana と Claude Code で作成しました。
