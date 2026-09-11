@@ -117,11 +117,13 @@ if __name__ == '__main__':
         author, comments, company = 'gregre365, MAMEdev and contributors', 'Pachislot emulator based on MAME', 'gregre365'
         filedesc = product = 'Retro Pachislot Emulator'
         rdns = 'io.github.gregre365.' + options.executable
+        copyright = '\u00a9 1997-2026 MAMEdev and contributors, \u00a9 2026 gregre365'
     else:
         author, comments, company = 'MAMEdev and contributors', 'Multi-purpose emulation framework', 'MAMEdev'
         filedesc = 'MAME'
         product = ('MAME' if options.target == 'mame' else options.target)
         rdns = 'org.mamedev.' + internal
+        copyright = '\u00a9 1997-2026 MAMEdev and contributors'
     text = template.substitute(
             version=verfull,
             major=vermajor, minor=verminor, build=verpatch, subbuild='0',
@@ -133,7 +135,7 @@ if __name__ == '__main__':
             original=options.executable,
             product=product,
             rdns=rdns,
-            copyright='\u00a9 1997-2026 MAMEdev and contributors',
+            copyright=copyright,
             winfileflags=('0x0L' if verbuild == '0' else 'VS_FF_PRERELEASE'),
             resources=(options.resources or 'mame.rc'))
 
