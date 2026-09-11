@@ -1,6 +1,6 @@
 # Retro Pachislot Emulator
 
-<p align="center"><img src=".github/images/screenshot.png" alt="Retro Pachislot Emulator running Wild Cats" width="400"></p>
+<p align="center"><img src=".github/images/banner.jpg" alt="Retro Pachislot Emulator running Wild Cats"></p>
 
 <p align="center"><sub>The artwork is original to this project and intentionally differs from the real machine's design, out of respect for its copyright.<br>アートワークは実機のデザインの著作権に配慮し、本プロジェクト用に独自に作成したもので、実機とは異なります。</sub></p>
 
