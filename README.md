@@ -55,7 +55,11 @@ and the machine may not work correctly.
 
 ## Getting started
 
-1. Build `retropachislotemu` (see [Building](#building)).
+1. On Windows, download `retropachislotemu-<version>-windows-x64.zip` from the
+   [Releases](https://github.com/gregre365/retro-pachislot-emulator/releases)
+   page and extract it. Otherwise build `retropachislotemu` (see
+   [Building](#building)). The executable is not signed, so Windows may show
+   a SmartScreen warning the first time you run it.
 2. Put the ROM in `roms/` as described in [ROM required](#rom-required).
 3. Run from the folder that contains `roms/` and `artwork/`
    (both are looked up relative to the current folder):
@@ -256,7 +260,10 @@ CRC32 / SHA-1 が一致しない場合は、チェックサムが違うという
 
 ## 使い方
 
-1. `retropachislotemu` をビルドします（[ビルド方法](#ビルド方法)）。
+1. Windows の場合は、[Releases](https://github.com/gregre365/retro-pachislot-emulator/releases)
+   ページから `retropachislotemu-<バージョン>-windows-x64.zip` をダウンロードして展開します。
+   それ以外は `retropachislotemu` をビルドします（[ビルド方法](#ビルド方法)）。
+   実行ファイルには署名がないため、初回起動時に Windows の SmartScreen の警告が出ることがあります。
 2. ROM を `roms/` に置きます（[ワイルドキャッツ実機のROMが必要です](#ワイルドキャッツ実機のromが必要です) を参照）。
 3. `roms/` と `artwork/` があるフォルダーで起動します
    （どちらも、起動したときのフォルダーを基準に探します）。

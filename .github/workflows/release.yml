@@ -1,0 +1,85 @@
+name: Windows release build
+
+# Builds retropachislotemu.exe with the MinGW cross toolchain on Ubuntu (the
+# same way as `make CROSS_WINDOWS=1` locally) and packages it with the files
+# it needs at run time.
+#
+# - Publishing a GitHub release attaches the zip to that release.
+# - "Run workflow" on the Actions tab builds the same zip as a workflow
+#   artifact, to test before releasing.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows-x64:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install MinGW cross toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            gcc-mingw-w64-x86-64-posix g++-mingw-w64-x86-64-posix
+
+      - name: Build
+        run: make -j"$(nproc)" CROSS_WINDOWS=1
+
+      - name: Package
+        id: package
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          TAG_NAME: ${{ github.event.release.tag_name }}
+        run: |
+          if [ "${EVENT_NAME}" = "release" ]; then
+            version="${TAG_NAME}"
+          else
+            version="dev-${GITHUB_SHA::7}"
+          fi
+          name="retropachislotemu-${version}-windows-x64"
+          dir="dist/${name}"
+          mkdir -p "${dir}/roms" "${dir}/docs"
+
+          x86_64-w64-mingw32-strip -o "${dir}/retropachislotemu.exe" retropachislotemu.exe
+          cp -r artwork bgfx hlsl plugins ctrlr keymaps "${dir}/"
+          cp -r docs/legal "${dir}/docs/"
+          find language -name strings.mo | while read -r mo; do
+            mkdir -p "${dir}/$(dirname "${mo}")"
+            cp "${mo}" "${dir}/${mo}"
+          done
+          cp README.md COPYING "${dir}/"
+          printf '%s\r\n' \
+            'Put the ROM here: wildcats.zip (containing wildcats-ndk.bin).' \
+            'ROMs are not included. See README.md.' \
+            '' \
+            'ここに ROM（wildcats-ndk.bin を入れた wildcats.zip）を置いてください。' \
+            'ROM は同梱していません。README.md を参照してください。' \
+            > "${dir}/roms/README.txt"
+
+          (cd dist && zip -qr9 "${name}.zip" "${name}")
+          ls -l "dist/${name}.zip"
+          echo "name=${name}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.package.outputs.name }}
+          path: dist/${{ steps.package.outputs.name }}.zip
+          if-no-files-found: error
+
+      - name: Attach to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.event.release.tag_name }}
+          ZIP_NAME: ${{ steps.package.outputs.name }}
+        run: gh release upload "${TAG_NAME}" "dist/${ZIP_NAME}.zip" --clobber
