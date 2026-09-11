@@ -23,12 +23,13 @@ def parse_args():
 
 
 def extract_version(verinfo):
-    pattern = re.compile(r'\s+BARE_BUILD_VERSION\s+"(([^."]+)\.([^."]+))"')
+    # Retro Pachislot Emulator: also accept a third (patch) number, e.g. 0.1.0
+    pattern = re.compile(r'\s+BARE_BUILD_VERSION\s+"(([^."]+)\.([^."]+)(?:\.([^."]+))?)"')
     for line in verinfo:
         match = pattern.search(line)
         if match:
-            return match.group(1), match.group(2), match.group(3)
-    return None, None, None
+            return match.group(1), match.group(2), match.group(3), (match.group(4) or '0')
+    return None, None, None, None
 
 
 if __name__ == '__main__':
@@ -36,7 +37,7 @@ if __name__ == '__main__':
 
     try:
         with io.open(options.input, 'r') as verinfo:
-            verfull, vermajor, verminor = extract_version(verinfo)
+            verfull, vermajor, verminor, verpatch = extract_version(verinfo)
             verbuild = '0'
     except IOError as e:
         sys.stderr.write("Error reading source file '%s': %s\n" % (options.input, e))
@@ -123,7 +124,7 @@ if __name__ == '__main__':
         rdns = 'org.mamedev.' + internal
     text = template.substitute(
             version=verfull,
-            major=vermajor, minor=verminor, build='0', subbuild='0',
+            major=vermajor, minor=verminor, build=verpatch, subbuild='0',
             author=author,
             comments=comments,
             company=company,

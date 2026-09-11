@@ -188,6 +188,7 @@ This tree is MAME 0.289 with the following changes.
   `retropachislot.ini`, and the Windows build has its own icon and version
   information (`scripts/src/main.lua`, `src/mame/wildcats.cpp`,
   `scripts/build/verinfo.py`, `scripts/resources/windows/mame/`).
+  The version number is this project's own (set in `makefile`), not MAME's.
 
 ## License
 
@@ -389,6 +390,7 @@ PNG は各色 8bit で保存してください。16bit の PNG は正しく表�
   実行ファイルは `retropachislotemu`、設定ファイルは `retropachislot.ini` で、
   Windows 版には専用のアイコンとバージョン情報を付けています（`scripts/src/main.lua`、
   `src/mame/wildcats.cpp`、`scripts/build/verinfo.py`、`scripts/resources/windows/mame/`）。
+  バージョン番号は MAME のものではなく、このプロジェクト独自の番号です（`makefile` で設定）。
 
 ## ライセンス
 
