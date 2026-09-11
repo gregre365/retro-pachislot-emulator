@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 30 1010 210">
+	  <!-- decorative ribbon banner with a star medallion -->
+	  <g>
+	    <path fill="#6b4a1c" d="M130,110 L1080,80 L1100,130 L1080,180 L130,150 L150,130 Z"/>
+	    <path fill="#eddda6" d="M150,115 L1065,88 L1080,130 L1065,172 L150,145 L165,130 Z"/>
+	    <path fill="#17110f" d="M175,120 L1050,96 L1062,130 L1050,164 L175,140 L188,130 Z"/>
+	    <path fill="#eddda6" d="M200,125 L1030,104 L1040,130 L1030,156 L200,135 L210,130 Z" opacity="0.55"/>
+	    <g transform="translate(615,130) rotate(-6)" fill="#c9302c" stroke="#6b1410" stroke-width="4" stroke-linejoin="round">
+	      <path d="M0,-58 L15,-18 L58,-18 L24,7 L36,48 L0,23 L-36,48 L-24,7 L-58,-18 L-15,-18 Z"/>
+	    </g>
+	  </g>
+	</svg>

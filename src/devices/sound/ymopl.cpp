@@ -206,7 +206,17 @@ ym2413_device::ym2413_device(const machine_config &mconfig, const char *tag, dev
 void ym2413_device::device_start()
 {
 	parent::device_start();
-	m_chip.set_instrument_data(m_internal);
+
+	// Retro Pachislot Emulator: the internal instrument ROM is never loaded.
+	// Upstream MAME requires ym2413.zip, a dump of the chip's mask ROM that
+	// cannot be redistributed, and refuses to start without it.  Instead,
+	// ymfm::ym2413 keeps the built-in voice table it selects when constructed
+	// without instrument data, which ymfm labels copyright-free
+	// (3rdparty/ymfm/src/ymfm_opl.cpp, s_default_instruments).  User-defined
+	// instrument 0 does not depend on the table; built-in instruments 1-15
+	// and the rhythm voices may sound slightly different from a real YM2413.
+	// Upstream code:
+	//     m_chip.set_instrument_data(m_internal);
 }
 
 
@@ -215,6 +225,9 @@ void ym2413_device::device_start()
 //  ROM region
 //-------------------------------------------------
 
+// Retro Pachislot Emulator: no ROM is requested (see device_start above).
+// Upstream definition, kept for reference:
+#if 0
 ROM_START( ym2413 )
 	ROM_REGION( 0x90, "internal", 0 )
 	//
@@ -222,10 +235,11 @@ ROM_START( ym2413 )
 	//
 	ROM_LOAD16_WORD( "ym2413_instruments.bin", 0x0000, 0x0090, CRC(6f582d01) SHA1(bb5537717e0b34849456b5ca7d405403dc3f8fda) )
 ROM_END
+#endif
 
 const tiny_rom_entry *ym2413_device::device_rom_region() const
 {
-	return ROM_NAME( ym2413 );
+	return nullptr;
 }
 
 

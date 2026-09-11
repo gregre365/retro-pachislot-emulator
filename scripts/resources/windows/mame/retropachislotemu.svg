@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- license:CC0  copyright-holders:gregre365 -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f6fd8"/>
+      <stop offset="1" stop-color="#123a86"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3f8"/>
+      <stop offset="0.45" stop-color="#9aa8b8"/>
+      <stop offset="0.7" stop-color="#e2eaf2"/>
+      <stop offset="1" stop-color="#5a6572"/>
+    </linearGradient>
+    <linearGradient id="reel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9b9b9"/>
+      <stop offset="0.28" stop-color="#ffffff"/>
+      <stop offset="0.72" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9b9b9"/>
+    </linearGradient>
+    <linearGradient id="seven" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff4a3a"/>
+      <stop offset="1" stop-color="#c0121a"/>
+    </linearGradient>
+    <!-- bold original "7": flat top bar, slanted stem -->
+    <path id="g7" d="M -26,-36 L 26,-36 L 26,-22 L -2,36 L -20,36 L 8,-20 L -26,-20 Z"/>
+  </defs>
+
+  <!-- cabinet body -->
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="url(#body)"/>
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="none" stroke="#071a3e" stroke-width="6"/>
+
+  <!-- chrome bezel around the reel window -->
+  <rect x="26" y="58" width="204" height="140" rx="20" fill="url(#chrome)"/>
+  <rect x="36" y="68" width="184" height="120" rx="12" fill="#1a1e33"/>
+
+  <!-- three reels -->
+  <rect x="42" y="74" width="54" height="108" rx="6" fill="url(#reel)"/>
+  <rect x="101" y="74" width="54" height="108" rx="6" fill="url(#reel)"/>
+  <rect x="160" y="74" width="54" height="108" rx="6" fill="url(#reel)"/>
+
+  <!-- payline -->
+  <rect x="30" y="126" width="196" height="4" fill="#ffcf3a" opacity="0.9"/>
+
+  <!-- 7s -->
+  <g stroke="#2a0d0d" stroke-width="7" stroke-linejoin="round" fill="url(#seven)" paint-order="stroke">
+    <use href="#g7" x="69" y="128"/>
+    <use href="#g7" x="128" y="128"/>
+    <use href="#g7" x="187" y="128"/>
+  </g>
+
+  <!-- top lamp strip -->
+  <rect x="40" y="24" width="176" height="20" rx="10" fill="#ffcf3a"/>
+  <rect x="40" y="24" width="176" height="20" rx="10" fill="none" stroke="#8a6a22" stroke-width="3"/>
+
+  <!-- buttons -->
+  <circle cx="84" cy="222" r="11" fill="#e53a2a" stroke="#5a0f0a" stroke-width="3"/>
+  <circle cx="128" cy="222" r="11" fill="#e53a2a" stroke="#5a0f0a" stroke-width="3"/>
+  <circle cx="172" cy="222" r="11" fill="#e53a2a" stroke="#5a0f0a" stroke-width="3"/>
+</svg>

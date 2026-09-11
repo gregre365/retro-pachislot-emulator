@@ -77,6 +77,9 @@ running_machine::running_machine(const machine_config &_config, machine_manager 
 	, m_paused(false)
 	, m_hard_reset_pending(false)
 	, m_exit_pending(false)
+	, m_power_off_pending(false)
+	, m_power_off_timeout(attotime::zero)
+	, m_power_off_deadline(0)
 	, m_soft_reset_timer(nullptr)
 	, m_rand_seed(0x9d14abd7)
 	, m_basename(_config.gamedrv().name)
@@ -423,6 +426,13 @@ int running_machine::run(bool quiet)
 			// handle save/load
 			if (m_saveload_schedule != saveload_schedule::NONE)
 				handle_saveload();
+
+			// give up on the power-off sequence if the driver never completed it
+			if (m_power_off_pending && !m_exit_pending && (osd_ticks() >= m_power_off_deadline))
+			{
+				osd_printf_warning("Power-off sequence did not complete; exiting anyway\n");
+				exit_now();
+			}
 		}
 		m_manager.http()->clear();
 
@@ -487,6 +497,64 @@ int running_machine::run(bool quiet)
 
 void running_machine::schedule_exit()
 {
+	// let the driver run its power-off sequence first: machines with battery-backed
+	// RAM need the emulated CPU to write its backup signature before we snapshot NVRAM.
+	// once started, further exit requests are ignored (-seconds_to_run, for one, asks
+	// every frame); the exit happens when the driver calls power_off_complete() or
+	// when the timeout checked in run() expires.  a hard reset while we're waiting
+	// still exits without the signature, but that's what happened before this hook
+	// existed, so it's left alone.
+	//
+	// a working autosave is deliberately excluded: it snapshots the whole emulated
+	// machine, so running the sequence first would only capture the CPU sitting in the
+	// halt loop it enters once the backup is written, and resuming that state would go
+	// nowhere.  the test mirrors the one guarding schedule_save() in exit_now() so the
+	// two stay in step -- ask for autosave on a driver that can't save, or quit before
+	// any emulated time has passed, and the backup signature still gets written.
+	//
+	// the state file wins on the next run: nvram_load() happens first and the initial
+	// handle_saveload() overwrites RAM afterwards.  delete sta/ and the NVRAM left
+	// behind carries no signature, so that run cold-starts -- the price of pointing
+	// autosave at a machine that already backs itself up.
+	//
+	// a CPU stopped in the debugger can't run the sequence, and the debugger's wait
+	// loop only returns for m_exit_pending, so in that case exit straight away.
+	if (!m_power_off_sequence.isnull() && !m_exit_pending
+			&& !((debug_flags & DEBUG_FLAG_ENABLED) && debugger().cpu().is_stopped()))
+	{
+		if (m_power_off_pending)
+			return;
+
+		if (!(options().autosave() && m_save.supported() && (this->time() > attotime::zero))
+				&& (m_current_phase == machine_phase::RUNNING))
+		{
+			m_power_off_pending = true;
+
+			// the deadline is in host time, not emulated time: the emulated clock stops
+			// dead if the user pauses, which would leave us waiting forever
+			m_power_off_deadline = osd_ticks()
+					+ osd_ticks_t(m_power_off_timeout.as_double() * osd_ticks_per_second());
+
+			// the sequence runs on the emulated CPU, so we can't stay paused
+			if (m_paused)
+				resume();
+
+			m_power_off_sequence();
+			return;
+		}
+	}
+
+	exit_now();
+}
+
+
+//-------------------------------------------------
+//  exit_now - the actual exit, bypassing the
+//  power-off sequence
+//-------------------------------------------------
+
+void running_machine::exit_now()
+{
 	m_exit_pending = true;
 
 	// if we're executing, abort out immediately
@@ -495,6 +563,32 @@ void running_machine::schedule_exit()
 	// if we're autosaving on exit, schedule a save as well
 	if (options().autosave() && m_save.supported() && (this->time() > attotime::zero))
 		schedule_save("auto");
+}
+
+
+//-------------------------------------------------
+//  set_power_off_sequence - register a driver hook
+//  to run when an exit is first requested
+//-------------------------------------------------
+
+void running_machine::set_power_off_sequence(machine_notify_delegate callback, attotime timeout)
+{
+	m_power_off_sequence = callback;
+	m_power_off_timeout = timeout;
+}
+
+
+//-------------------------------------------------
+//  power_off_complete - called by the driver once
+//  the emulated machine is safe to power down
+//-------------------------------------------------
+
+void running_machine::power_off_complete()
+{
+	// the pending flag is deliberately left set: clearing it would let a later exit
+	// request start the sequence all over again
+	if (m_power_off_pending && !m_exit_pending)
+		exit_now();
 }
 
 
@@ -1419,6 +1513,15 @@ void running_machine::emscripten_main_loop()
 	// otherwise, just pump video updates through
 	else
 		machine->m_video->frame_update();
+
+	// give up on the power-off sequence if the driver never completed it
+	// (mirrors the equivalent check in run()'s main loop; this loop doesn't
+	// go through run(), so without this the deadline would never fire)
+	if (machine->m_power_off_pending && !machine->m_exit_pending && (osd_ticks() >= machine->m_power_off_deadline))
+	{
+		osd_printf_warning("Power-off sequence did not complete; exiting anyway\n");
+		machine->exit_now();
+	}
 
 	// cancel the emscripten loop if the system has been told to exit
 	if (machine->exit_pending())

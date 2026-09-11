@@ -111,17 +111,27 @@ if __name__ == '__main__':
                 '#include "${resources}"\n')
 
     internal = options.target + '_' + options.subtarget if options.target != options.subtarget else options.target
+    if options.target == 'mame' and options.subtarget == 'wildcats':
+        # Retro Pachislot Emulator: own product name, MAME credited as the base.
+        author, comments, company = 'gregre365, MAMEdev and contributors', 'Pachislot emulator based on MAME', 'gregre365'
+        filedesc = product = 'Retro Pachislot Emulator'
+        rdns = 'io.github.gregre365.' + options.executable
+    else:
+        author, comments, company = 'MAMEdev and contributors', 'Multi-purpose emulation framework', 'MAMEdev'
+        filedesc = 'MAME'
+        product = ('MAME' if options.target == 'mame' else options.target)
+        rdns = 'org.mamedev.' + internal
     text = template.substitute(
             version=verfull,
             major=vermajor, minor=verminor, build='0', subbuild='0',
-            author='MAMEdev and contributors',
-            comments='Multi-purpose emulation framework',
-            company='MAMEdev',
-            filedesc='MAME',
+            author=author,
+            comments=comments,
+            company=company,
+            filedesc=filedesc,
             internal=internal,
             original=options.executable,
-            product=('MAME' if options.target == 'mame' else options.target),
-            rdns=('org.mamedev.' + internal),
+            product=product,
+            rdns=rdns,
             copyright='\u00a9 1997-2026 MAMEdev and contributors',
             winfileflags=('0x0L' if verbuild == '0' else 'VS_FF_PRERELEASE'),
             resources=(options.resources or 'mame.rc'))

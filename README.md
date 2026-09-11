@@ -1,101 +1,405 @@
-# MAME
+# Retro Pachislot Emulator
 
-## What is MAME?
+<p align="center"><img src=".github/images/screenshot.png" alt="Retro Pachislot Emulator running Wild Cats" width="400"></p>
 
-MAME is a multi-purpose emulation framework.
+<p align="center"><sub>The artwork is original to this project and intentionally differs from the real machine's design, out of respect for its copyright.<br>アートワークは実機のデザインの著作権に配慮し、本プロジェクト用に独自に作成したもので、実機とは異なります。</sub></p>
 
-MAME's purpose is to preserve decades of software history. As electronic technology continues to rush forward, MAME prevents this important "vintage" software from being lost and forgotten. This is achieved by documenting the hardware and how it functions. The source code to MAME serves as this documentation. The fact that the software is usable serves primarily to validate the accuracy of the documentation (how else can you prove that you have recreated the hardware faithfully?). Over time, MAME (originally stood for Multiple Arcade Machine Emulator) absorbed the sister-project MESS (Multi Emulator Super System), so MAME now documents a wide variety of (mostly vintage) computers, video game consoles and calculators, in addition to the arcade video games that were its initial focus.
+[日本語は下にあります](#日本語)
 
-## Where can I find out more?
+Retro Pachislot Emulator plays classic Japanese pachislot (medal slot)
+machines on a PC, with the whole cabinet drawn on screen: reels, lamps,
+payline plates, credit counter and control panel.
 
-* [Official MAME Development Team Site](https://www.mamedev.org/) (includes binary downloads, wiki, forums, and more)
-* [MAME Testers](https://mametesters.org/) (official bug tracker for MAME)
+It is built on [MAME](https://www.mamedev.org/) and is not affiliated with or
+endorsed by the MAME development team.
 
-### Community
+The cabinet artwork is not a copy of the real machine. Out of respect for the
+copyright in its printed design, all artwork was created for this project and
+differs from the original: the layout of the parts follows the real machine,
+but the illustrations, lettering and symbols are new.
 
-* [MAME Forums on bannister.org](https://forums.bannister.org/ubbthreads.php?ubb=cfrm&c=5)
-* [r/MAME](https://www.reddit.com/r/MAME/) on Reddit
-* [MAMEWorld Forums](https://www.mameworld.info/ubbthreads/)
+## Why
 
-## Development
+More than 30 years have passed since the second and third generations of
+pachislot machines (known in Japan as "type 2" and "type 3" machines) came
+out, and working units are getting hard to find even on the second-hand
+market. This project aims to preserve these machines in a working, playable
+form.
 
-![Alt](https://repobeats.axiom.co/api/embed/8461d8ae4630322dafc736fc25782de214b49630.svg "Repobeats analytics image")
+## Supported machines
 
-### CI status and code scanning
+| System name | Machine | Status |
+|---|---|---|
+| `wildcats` | Wild Cats (Ark Technico, 1991, type 3-1) | Playable |
+| - | Crazy Bubbles (Ark Technico, type 2-2) | WIP (not playable yet) |
 
-[![CI (Linux)](https://github.com/mamedev/mame/workflows/CI%20(Linux)/badge.svg)](https://github.com/mamedev/mame/actions/workflows/ci-linux.yml) [![CI (Windows](https://github.com/mamedev/mame/workflows/CI%20(Windows)/badge.svg)](https://github.com/mamedev/mame/actions/workflows/ci-windows.yml) [![CI (macOS)](https://github.com/mamedev/mame/workflows/CI%20(macOS)/badge.svg)](https://github.com/mamedev/mame/actions/workflows/ci-macos.yml) [![Compile UI translations](https://github.com/mamedev/mame/workflows/Compile%20UI%20translations/badge.svg)](https://github.com/mamedev/mame/actions/workflows/language.yml) [![Build documentation](https://github.com/mamedev/mame/workflows/Build%20documentation/badge.svg)](https://github.com/mamedev/mame/actions/workflows/docs.yml)  [![Coverity Scan Status](https://scan.coverity.com/projects/5727/badge.svg?flat=1)](https://scan.coverity.com/projects/mame-emulator)
+## ROM required
 
-### How to compile?
+**This project does not include or distribute any ROM.** To play, you need
+the program ROM dumped from a real machine's board that you own. Please do
+not ask for ROMs, and do not share them.
 
-If you're on a UNIX-like system (including Linux and macOS), it could be as easy as typing
+| System | File | Size | CRC32 | SHA-1 |
+|---|---|---|---|---|
+| `wildcats` | `wildcats-ndk.bin` | 8,192 bytes | `362b3e92` | `40aa96dded5a55865892868fd09cf5af4c909c85` |
 
-```
-make
-```
-
-for a full build,
-
-```
-make SUBTARGET=tiny
-```
-
-for a build including a small subset of supported systems.
-
-See the [Compiling MAME](http://docs.mamedev.org/initialsetup/compilingmame.html) page on our documentation site for more information, including prerequisites for macOS and popular Linux distributions.
-
-For recent versions of macOS you need to install [Xcode](https://developer.apple.com/xcode/) including command-line tools and [SDL 2.0](https://github.com/libsdl-org/SDL/releases/latest).
-
-For Windows users, we provide a ready-made [build environment](http://www.mamedev.org/tools/) based on MinGW-w64.
-
-Visual Studio builds are also possible, but you still need [build environment](http://www.mamedev.org/tools/) based on MinGW-w64.
-In order to generate solution and project files just run:
+Place it in one of these (either works):
 
 ```
-make vs2022
-```
-or use this command to build it directly using msbuild
-
-```
-make vs2022 MSBUILD=1
+roms/wildcats.zip            (a zip containing wildcats-ndk.bin)
+roms/wildcats/wildcats-ndk.bin
 ```
 
-### Coding standard
+If the CRC32 / SHA-1 do not match, the emulator warns about wrong checksums
+and the machine may not work correctly.
 
-MAME source code should be viewed and edited with your editor set to use four spaces per tab. Tabs are used for initial indentation of lines, with one tab used per indentation level. Spaces are used for other alignment within a line.
+## Getting started
 
-Some parts of the code follow [Allman style](https://en.wikipedia.org/wiki/Indent_style#Allman_style); some parts of the code follow [K&R style](https://en.wikipedia.org/wiki/Indent_style#K.26R_style) -- mostly depending on who wrote the original version. **Above all else, be consistent with what you modify, and keep whitespace changes to a minimum when modifying existing source.** For new code, the majority tends to prefer Allman style, so if you don't care much, use that.
+1. Build `retropachislotemu` (see [Building](#building)).
+2. Put the ROM in `roms/` as described in [ROM required](#rom-required).
+3. Run from the folder that contains `roms/` and `artwork/`
+   (both are looked up relative to the current folder):
 
-All contributors need to either add a standard header for license info (on new files) or inform us of their wishes regarding which of the following licenses they would like their code to be made available under: the [BSD-3-Clause](http://opensource.org/licenses/BSD-3-Clause) license, the [LGPL-2.1](http://opensource.org/licenses/LGPL-2.1), or the [GPL-2.0](http://opensource.org/licenses/GPL-2.0).
+   ```
+   ./retropachislotemu wildcats          (Linux)
+   .\retropachislotemu.exe wildcats      (Windows, PowerShell)
+   ```
 
-See more specific [C++ Coding Guidelines](https://docs.mamedev.org/contributing/cxx.html) on our documentation web site.
+   To run from somewhere else, pass the paths, for example:
+   `./retropachislotemu wildcats -rompath <path>/roms -artpath <path>/artwork`
+
+Credits, bonus state and settings are kept when you quit, just like the real
+machine keeps them across a power cut.
+
+### Controls (default keys)
+
+| Key | Action |
+|---|---|
+| 5 | Insert medal |
+| M | Bet |
+| 1 | Start lever |
+| A / S / D | Stop left / centre / right reel |
+| 4 | Payout |
+| F2 | Setting key |
+| 9 | Setting change switch |
+| 0 | Reset (door key) |
+
+Keys can be changed from the in-emulator menu (Tab).
+
+### Views
+
+- **Wild Cats (cabinet)** - the full cabinet front (default)
+- **Glass Panel** - only the illuminated panel with the reels
+- **Debug Overlay** - the panel plus LEDs for reel sensors, hopper, coin
+  lockout and hall computer outputs, and the medals-in minus medals-out
+  count, for developers
+
+## Building
+
+Build settings for this project are in `useroptions.mak`
+(`SUBTARGET = wildcats`), so a plain `make` builds only what is needed.
+Install the build tools described in the
+[MAME compiling guide](https://docs.mamedev.org/initialsetup/compilingmame.html)
+first.
+
+### Linux
+
+```
+make -j$(nproc)
+```
+
+### Windows (MSYS2)
+
+With MSYS2 installed in `C:\msys64`, run from PowerShell:
+
+```
+.\build.ps1
+```
+
+`.\build.ps1 -Jobs 8`, `.\build.ps1 -DebugBuild` and
+`.\build.ps1 -Target clean` are also available.
+
+### Windows executable from Linux (cross build)
+
+Requires `gcc-mingw-w64-x86-64-posix` and `g++-mingw-w64-x86-64-posix`.
+
+```
+make -j$(nproc) CROSS_WINDOWS=1
+```
+
+## Customizing the artwork
+
+Everything you see is a plain image in `artwork/`, so you can change the look
+with any image editor. No rebuild is needed; just restart the emulator.
+
+- `wc_panel_bg.png`, `wc_cp_bg.png`, `wc_tl_bg.png`, `wc_lp_panel.png` -
+  backgrounds (everything that never lights up)
+- `wc_*_on.png`, `wc_*_glow_on.png`, `wc_*_lit.png` - lit images drawn over
+  the background when a lamp turns on
+- `wc_<symbol>.png`, `wc_<symbol>_aaa.png` - reel symbols
+
+The two large backgrounds are assembled from separate pieces in
+`artwork/sources/`. After editing a piece, rebuild the background with:
+
+```
+python3 tools/compose_artwork.py tools/manifests/panel_bg.json
+python3 tools/compose_artwork.py tools/manifests/cp_bg.json
+```
+
+This needs ImageMagick, and headless Chrome for SVG pieces. See
+`tools/manifests/README.md` for details.
+
+Save PNG files with 8 bits per channel. 16-bit PNGs are not drawn correctly.
+
+## Differences from MAME
+
+This tree is MAME 0.289 with the following changes.
+
+- **Wild Cats driver (new).** `src/mame/arktechnico/wildcats.cpp`,
+  `wildcats_reel.cpp` and `wildcats_reel.h` emulate the machine; it is not in
+  MAME 0.289.
+- **Power-off sequence (MAME core change).** The real machine keeps credits
+  and bonus state across a power cut: when the power-off signal is asserted,
+  the firmware saves the CPU context to backed-up RAM and halts. Upstream
+  MAME simply exits, so that context is never saved and the next start is a
+  cold start. `running_machine` (`src/emu/machine.cpp`, `machine.h`) gains a
+  hook that lets a driver run such a sequence before exiting. On quit, the
+  driver asserts the signal, waits for the firmware to report that the
+  backup is done, then exits, and the game resumes on the next start.
+  - If the firmware does not answer within 500 ms, the emulator exits anyway.
+  - Further quit requests while it runs are ignored; a CPU stopped in the
+    debugger skips the sequence.
+  - With `-autosave`, the sequence is skipped because the save state already
+    keeps the whole machine.
+- **No YM2413 instrument ROM (MAME core change).** Upstream MAME needs a
+  dump of the YM2413's internal voice ROM, which cannot be redistributed.
+  `src/devices/sound/ymopl.cpp` is changed to never load it and always use
+  the copyright-free voice table built into ymfm, so no extra file is
+  needed. Wild Cats mostly plays a user-defined voice, but some sounds use
+  the internal voices and may differ slightly from a real YM2413.
+- **Layout.** `wildcats_artwork.lay` draws the cabinet from the images in
+  `artwork/`. The upstream text-only `wildcats.lay` is kept but not used.
+- **Build and naming.** Only this driver is built (`SUBTARGET = wildcats`).
+  The executable is `retropachislotemu`, the settings file is
+  `retropachislot.ini`, and the Windows build has its own icon and version
+  information (`scripts/src/main.lua`, `src/mame/wildcats.cpp`,
+  `scripts/build/verinfo.py`, `scripts/resources/windows/mame/`).
 
 ## License
 
-The MAME project as a whole is made available under the terms of the
-[GNU General Public License, version 2](http://opensource.org/licenses/GPL-2.0)
-or later (GPL-2.0+), since it contains code made available under multiple
-GPL-compatible licenses.  A great majority of the source files (over 90%
-including core files) are made available under the terms of the
-[3-clause BSD License](http://opensource.org/licenses/BSD-3-Clause), and we
-would encourage new contributors to make their contributions available under the
-terms of this license.
+- Program code: as MAME, the project as a whole is under the
+  [GNU General Public License, version 2](docs/legal/GPL-2.0) or later.
+  Individual source files carry their own license headers. New code files
+  for this project (driver, `build.ps1`) are BSD-3-Clause.
+- Layout (`src/mame/layout/wildcats_artwork.lay`), the `artwork/wc_*.png`
+  images, everything in `artwork/sources/`, `tools/` (artwork compositing
+  tool and manifests) and the Windows icon images
+  (`scripts/resources/windows/mame/retropachislotemu.ico`, `.svg`,
+  `_small.svg`, `_16.png`):
+  [CC0](docs/legal/CC0) (public domain dedication). The other files in
+  `artwork/` come from MAME.
 
-Please note that MAME is a registered trademark of Gregory Ember, and permission
-is required to use the "MAME" name, logo, or wordmark.
+MAME is a registered trademark of Gregory Ember. Machine and manufacturer
+names are used only to identify the hardware being emulated; this project is
+not affiliated with or endorsed by their owners. The artwork was made for this
+project and is not taken from the original machine.
 
-<a href="http://opensource.org/licenses/GPL-2.0" target="_blank">
-<img align="right" width="100" src="https://opensource.org/wp-content/uploads/2009/06/OSIApproved.svg">
-</a>
+The reel symbol images were generated with Google Gemini (Nano Banana). The
+other artwork was created with Claude Code (Anthropic).
 
-    Copyright (c) 1997-2026  MAMEdev and contributors
+---
 
-    This program is free software; you can redistribute it and/or modify it
-    under the terms of the GNU General Public License version 2, as provided in
-    docs/legal/GPL-2.0.
+## 日本語
 
-    This program is distributed in the hope that it will be useful, but WITHOUT
-    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-    more details.
+Retro Pachislot Emulator は、昔のパチスロ実機を PC で遊べるエミュレーターです。
+リール、ランプ、有効ラインの表示板、クレジット表示、操作パネルまで、筐体全体を
+画面に再現します。
 
-Please see [COPYING](COPYING) for more details.
+[MAME](https://www.mamedev.org/) をベースにしていますが、MAME 開発チームとは
+関係がなく、公認を受けたものでもありません。
+
+筐体のアートワークは実機の複製ではありません。実機に印刷されたデザインの著作権に
+配慮し、すべて本プロジェクト用に作成したもので、実機とは異なります。部品の配置は
+実機に合わせていますが、イラスト、文字、図柄は新しく描き起こしたものです。
+
+## このプロジェクトについて
+
+パチスロの2号機・3号機が登場してから30年以上が経ち、中古市場でも実機を
+手に入れるのが難しくなっています。本プロジェクトは、当時の機械を動作する形で
+残すことを目的としています。
+
+## 対応機種
+
+| システム名 | 機種 | 状態 |
+|---|---|---|
+| `wildcats` | ワイルドキャッツ（アークテクニコ 3-1号機、1991年） | プレイ可能 |
+| - | クレイジーバブルス（アークテクニコ 2-2号機） | 開発中（まだ遊べません） |
+
+## ワイルドキャッツ実機のROMが必要です
+
+**このプロジェクトは ROM を同梱・配布していません。** 遊ぶには、ご自身が所有する
+実機の基板から吸い出したプログラム ROM が必要です。ROM の提供には
+応じられませんので、ご了承ください。また、ROM の共有もご遠慮ください。
+
+| システム | ファイル名 | サイズ | CRC32 | SHA-1 |
+|---|---|---|---|---|
+| `wildcats` | `wildcats-ndk.bin` | 8,192 バイト | `362b3e92` | `40aa96dded5a55865892868fd09cf5af4c909c85` |
+
+次のどちらかの形で置いてください。
+
+```
+roms/wildcats.zip            （wildcats-ndk.bin を入れた zip）
+roms/wildcats/wildcats-ndk.bin
+```
+
+CRC32 / SHA-1 が一致しない場合は、チェックサムが違うという警告が出て、正しく動かないことがあります。
+
+## 使い方
+
+1. `retropachislotemu` をビルドします（[ビルド方法](#ビルド方法)）。
+2. ROM を `roms/` に置きます（[ワイルドキャッツ実機のROMが必要です](#ワイルドキャッツ実機のromが必要です) を参照）。
+3. `roms/` と `artwork/` があるフォルダーで起動します
+   （どちらも、起動したときのフォルダーを基準に探します）。
+
+   ```
+   ./retropachislotemu wildcats          （Linux）
+   .\retropachislotemu.exe wildcats      （Windows、PowerShell）
+   ```
+
+   別の場所から起動する場合は、次のようにパスを指定します。
+   `./retropachislotemu wildcats -rompath <パス>/roms -artpath <パス>/artwork`
+
+終了してもクレジット、ボーナスの状態、設定は保持されます。実機が停電しても
+状態を保つのと同じ仕組みです。
+
+### 操作（初期設定のキー）
+
+| キー | 操作 |
+|---|---|
+| 5 | メダル投入 |
+| M | ベット |
+| 1 | スタートレバー |
+| A / S / D | 左 / 中 / 右リール停止 |
+| 4 | 精算 |
+| F2 | 設定キー |
+| 9 | 設定変更スイッチ |
+| 0 | リセット（ドアキー） |
+
+キーはエミュレーター内のメニュー（Tab キー）で変更できます。
+
+### 表示モード
+
+- **Wild Cats (cabinet)** - 筐体の正面全体（標準）
+- **Glass Panel** - リールのある表示パネルだけ
+- **Debug Overlay** - 表示パネルに加えて、リールセンサー、ホッパー、
+  メダルブロッカー、ホールコンピューター出力の状態を LED で、投入枚数と払い出し枚数の
+  差を数字で表示する開発者向け画面
+
+## ビルド方法
+
+このプロジェクト用のビルド設定は `useroptions.mak`（`SUBTARGET = wildcats`）に
+入っているので、`make` だけで必要な部分がビルドされます。先に
+[MAME のビルドガイド](https://docs.mamedev.org/initialsetup/compilingmame.html)
+に沿ってビルドツールを入れてください。
+
+### Linux
+
+```
+make -j$(nproc)
+```
+
+### Windows（MSYS2）
+
+MSYS2 を `C:\msys64` に入れた状態で、PowerShell から実行します。
+
+```
+.\build.ps1
+```
+
+`.\build.ps1 -Jobs 8`（並列数）、`.\build.ps1 -DebugBuild`（デバッグビルド）、
+`.\build.ps1 -Target clean`（クリーン）も使えます。
+
+### Linux で Windows 用の exe を作る（クロスビルド）
+
+`gcc-mingw-w64-x86-64-posix` と `g++-mingw-w64-x86-64-posix` が必要です。
+
+```
+make -j$(nproc) CROSS_WINDOWS=1
+```
+
+## アートワークの変更
+
+画面に見えるものはすべて `artwork/` の画像なので、好きな画像編集ソフトで
+見た目を変えられます。ビルドし直す必要はなく、エミュレーターを再起動するだけで
+反映されます。
+
+- `wc_panel_bg.png`、`wc_cp_bg.png`、`wc_tl_bg.png`、`wc_lp_panel.png` -
+  背景（光らない部分すべて）
+- `wc_*_on.png`、`wc_*_glow_on.png`、`wc_*_lit.png` - ランプが点いたときに
+  背景の上に重ねる画像
+- `wc_<図柄>.png`、`wc_<図柄>_aaa.png` - リール図柄
+
+大きな背景2枚は、`artwork/sources/` にある部品から合成しています。部品を
+編集したら、次のコマンドで背景を作り直してください。
+
+```
+python3 tools/compose_artwork.py tools/manifests/panel_bg.json
+python3 tools/compose_artwork.py tools/manifests/cp_bg.json
+```
+
+ImageMagick と、SVG の部品を使う場合はヘッドレス Chrome が必要です。詳しくは
+`tools/manifests/README.md` を見てください。
+
+PNG は各色 8bit で保存してください。16bit の PNG は正しく表示されません。
+
+## MAME との違い
+
+このツリーは MAME 0.289 に次の変更を加えたものです。
+
+- **Wild Cats のドライバ（新規）** `src/mame/arktechnico/wildcats.cpp`、`wildcats_reel.cpp`、
+  `wildcats_reel.h` でこの機種をエミュレートします。MAME 0.289 には含まれていません。
+- **電源断シーケンス（MAME コアの改変）** 実機は停電してもクレジットやボーナスの
+  状態を保ちます。電源断信号が入ると、ファームウェアが CPU の状態をバックアップ
+  RAM に保存して停止する仕組みです。本家 MAME はそのまま終了するため、この保存が
+  行われず、次回は最初からの起動になります。そこで `running_machine`
+  （`src/emu/machine.cpp`、`machine.h`）に、終了前にドライバが処理を挟める仕組みを
+  追加しました。終了操作をすると、ドライバが電源断信号を入れ、ファームウェアが
+  保存完了を知らせてから終了します。次回の起動では、そのゲームの続きから始まります。
+  - ファームウェアが 500 ミリ秒以内に応答しない場合は、そのまま終了します。
+  - シーケンス中の追加の終了操作は無視します。デバッガで CPU を止めている場合は、
+    シーケンスを行わずに終了します。
+  - `-autosave` を使っている場合は、ステートセーブがマシン全体を保存するので、
+    このシーケンスは行いません。
+- **YM2413 の音色 ROM を使わない（MAME コアの改変）** 本家 MAME は YM2413 の
+  内蔵音色 ROM のダンプを必要としますが、これは再配布できません。そこで
+  `src/devices/sound/ymopl.cpp` を変更し、この ROM を読み込まず、常に ymfm に
+  組み込まれている著作権フリーの音色テーブルを使うようにしました。追加のファイルは
+  不要です。Wild Cats の音はほとんどがユーザー定義音色ですが、一部は内蔵音色を
+  使うため、実機の YM2413 と音色が少し異なる可能性があります。
+- **レイアウト** `wildcats_artwork.lay` で、`artwork/` の画像から筐体を描きます。
+  本家向けの文字だけの `wildcats.lay` も残してありますが、使っていません。
+- **ビルドと名前** このドライバだけをビルドします（`SUBTARGET = wildcats`）。
+  実行ファイルは `retropachislotemu`、設定ファイルは `retropachislot.ini` で、
+  Windows 版には専用のアイコンとバージョン情報を付けています（`scripts/src/main.lua`、
+  `src/mame/wildcats.cpp`、`scripts/build/verinfo.py`、`scripts/resources/windows/mame/`）。
+
+## ライセンス
+
+- プログラム: MAME と同じく、プロジェクト全体として
+  [GNU General Public License バージョン2](docs/legal/GPL-2.0) 以降です。
+  各ソースファイルのライセンスは、それぞれの先頭に書いてあります。このプロジェクトで
+  追加したコード（ドライバ、`build.ps1`）は BSD-3-Clause です。
+- レイアウト（`src/mame/layout/wildcats_artwork.lay`）、`artwork/wc_*.png` の画像、
+  `artwork/sources/` の中身、`tools/`（アートワーク合成ツールとマニフェスト）、
+  Windows のアイコン画像（`scripts/resources/windows/mame/` の `retropachislotemu.ico`、`.svg`、
+  `_small.svg`、`_16.png`）:
+  [CC0](docs/legal/CC0)（著作権を放棄し、パブリックドメインとして提供）。
+  `artwork/` のそれ以外のファイルは MAME 由来です。
+
+MAME は Gregory Ember の登録商標です。機種名とメーカー名は、エミュレートしている
+ハードウェアを示すためだけに使っており、それらの権利者とは関係がなく、公認を
+受けたものでもありません。アートワークはこのプロジェクトのために作ったもので、
+実機の印刷物から取ったものではありません。
+
+リール図柄の画像は Google Gemini（Nano Banana）で生成しました。それ以外の
+アートワークは Claude Code（Anthropic）で作成しました。

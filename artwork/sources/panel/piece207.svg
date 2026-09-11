@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="148 212 740 70">
+	  <defs>
+	    <linearGradient id="bgGold" x1="0" y1="238" x2="0" y2="275" gradientUnits="userSpaceOnUse">
+	      <stop offset="0" stop-color="#dcb573"/>
+	      <stop offset="0.55" stop-color="#c99f56"/>
+	      <stop offset="1" stop-color="#b0803c"/>
+	    </linearGradient>
+	    <linearGradient id="bgRed" x1="0" y1="244" x2="0" y2="269" gradientUnits="userSpaceOnUse">
+	      <stop offset="0" stop-color="#c62a34"/>
+	      <stop offset="1" stop-color="#a91b26"/>
+	    </linearGradient>
+	    <linearGradient id="bgRim" x1="0" y1="218" x2="0" y2="275" gradientUnits="userSpaceOnUse">
+	      <stop offset="0" stop-color="#e39a28"/>
+	      <stop offset="0.5" stop-color="#d3800f"/>
+	      <stop offset="1" stop-color="#c26d09"/>
+	    </linearGradient>
+	    <linearGradient id="bgYel" x1="0" y1="228" x2="0" y2="266" gradientUnits="userSpaceOnUse">
+	      <stop offset="0" stop-color="#dbc90a"/>
+	      <stop offset="0.45" stop-color="#cebd00"/>
+	      <stop offset="1" stop-color="#c2ae00"/>
+	    </linearGradient>
+	  </defs>
+
+	  <!-- 翼 (左) : 金縁 -->
+	  <path d="M154,275 L226,238.7 L330,259.9 L330,275 Z"
+	        fill="url(#bgGold)" stroke="#4a2a12" stroke-width="1.1" stroke-linejoin="round"/>
+	  <!-- 翼 (左) : 赤 -->
+	  <path d="M178.9,268.1 L226,244.4 L330,265.6 L330,268.1 Z"
+	        fill="url(#bgRed)" stroke="#5c1710" stroke-width="0.8" stroke-linejoin="round"/>
+
+	  <!-- 翼 (右) : 金縁 -->
+	  <path d="M878.5,275 L806.5,238.7 L702.5,259.9 L702.5,275 Z"
+	        fill="url(#bgGold)" stroke="#4a2a12" stroke-width="1.1" stroke-linejoin="round"/>
+	  <!-- 翼 (右) : 赤 -->
+	  <path d="M853.6,268.1 L806.5,244.4 L702.5,265.6 L702.5,268.1 Z"
+	        fill="url(#bgRed)" stroke="#5c1710" stroke-width="0.8" stroke-linejoin="round"/>
+
+	  <!-- オーバル: 外側の白/クリーム縁 -->
+	  <rect x="279.5" y="218.5" width="473.5" height="56.5" rx="28.25" ry="28.25"
+	        fill="#f3e7cd" stroke="#6b4a24" stroke-width="1.0"/>
+	  <!-- オーバル: 橙のリム -->
+	  <rect x="283.6" y="222.6" width="465.3" height="48.3" rx="24.15" ry="24.15"
+	        fill="url(#bgRim)" stroke="#5d3406" stroke-width="1.1"/>
+	  <!-- オーバル: 黄色の地 -->
+	  <rect x="289.8" y="228.8" width="452.9" height="35.9" rx="17.95" ry="17.95"
+	        fill="url(#bgYel)" stroke="#7a5502" stroke-width="1.0"/>
+	</svg>

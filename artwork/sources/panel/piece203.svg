@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="750" viewBox="0 0 25 750">
+	  <defs>
+	    <linearGradient id="bgdEdgeR" x1="0" y1="0" x2="25" y2="0" gradientUnits="userSpaceOnUse">
+	      <stop offset="0"     stop-color="#ffffff" stop-opacity="0"/>
+	      <stop offset="0.400" stop-color="#ffffff" stop-opacity="0.022"/>
+	      <stop offset="0.640" stop-color="#ffffff" stop-opacity="0.004"/>
+	      <stop offset="0.720" stop-color="#000000" stop-opacity="0"/>
+	      <stop offset="0.760" stop-color="#000000" stop-opacity="0.035"/>
+	      <stop offset="0.840" stop-color="#000000" stop-opacity="0.087"/>
+	      <stop offset="0.920" stop-color="#000000" stop-opacity="0.139"/>
+	      <stop offset="1"     stop-color="#000000" stop-opacity="0.19"/>
+	    </linearGradient>
+	  </defs>
+	  <rect x="0" y="0" width="25" height="750" fill="url(#bgdEdgeR)"/>
+	</svg>

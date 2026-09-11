@@ -1,0 +1,20 @@
+{
+  "asset_dir": "../../artwork",
+  "scale": 3,
+  "canvas": {"file": "sources/wc_cp_face.png"},
+  "pieces": [
+    {"file": "sources/wc_cp_knob.png",       "x": 57.6,  "y": 19.0,  "w": 120, "h": 120},
+    {"file": "sources/wc_cp_plate.svg",      "x": 269.4, "y": 21.3,  "w": 379, "h": 111},
+    {"file": "sources/wc_cp_button.png",     "x": 315.6, "y": 51.3,  "w": 51,  "h": 51},
+    {"file": "sources/wc_cp_button.png",     "x": 435.4, "y": 51.3,  "w": 51,  "h": 51},
+    {"file": "sources/wc_cp_button.png",     "x": 555.3, "y": 51.3,  "w": 51,  "h": 51},
+    {"file": "sources/wc_cp_dome.png",       "x": 746.5, "y": 43.9,  "w": 44,  "h": 44},
+    {"file": "sources/wc_cp_ring.png",       "x": 843.0, "y": 35.2,  "w": 76,  "h": 76},
+    {"file": "sources/wc_cp_stepring.png",   "x": 108.3, "y": 152.9, "w": 42,  "h": 42},
+    {"file": "sources/wc_cp_steplabels.png", "x": 175.0, "y": 155.0, "w": 155, "h": 35},
+    {"file": "sources/wc_cp_bet.png",        "x": 828.0, "y": 163.0, "w": 88,  "h": 24},
+    {"file": "sources/wc_cp_lock.png",       "x": 942.1, "y": 157.3, "w": 34,  "h": 34}
+  ],
+  "final_size": {"width": 1000, "height": 202},
+  "output": "wc_cp_bg.png"
+}

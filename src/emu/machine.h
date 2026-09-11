@@ -189,6 +189,12 @@ public:
 	void schedule_save(std::string &&filename);
 	void schedule_load(std::string &&filename);
 
+	// power-off sequence, for machines with battery-backed RAM that need the
+	// emulated CPU to save its state before the power actually goes away
+	void set_power_off_sequence(machine_notify_delegate callback, attotime timeout);
+	void power_off_complete();
+	bool power_off_pending() const { return m_power_off_pending; }
+
 	// date & time
 	void base_datetime(system_time &systime);
 	void current_datetime(system_time &systime);
@@ -240,6 +246,7 @@ private:
 	void enable_side_effects_count()  { m_side_effects_disabled--; }
 
 	// internal helpers
+	void exit_now();
 	template <typename T> struct is_null { template <typename U> static bool value(U &&x) { return false; } };
 	template <typename T> struct is_null<T *> { template <typename U> static bool value(U &&x) { return !x; } };
 	void start();
@@ -290,6 +297,10 @@ private:
 	bool                    m_paused;               // paused?
 	bool                    m_hard_reset_pending;   // is a hard reset pending?
 	bool                    m_exit_pending;         // is an exit pending?
+	machine_notify_delegate m_power_off_sequence;   // driver hook to run before exiting
+	bool                    m_power_off_pending;    // is the power-off sequence running?
+	attotime                m_power_off_timeout;    // how long to let the sequence run
+	osd_ticks_t             m_power_off_deadline;   // host time at which to give up on it
 	emu_timer *             m_soft_reset_timer;     // timer used to schedule a soft reset
 
 	// misc state

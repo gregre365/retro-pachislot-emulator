@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="27" viewBox="0 0 1000 27">
+	  <defs>
+	    <linearGradient id="bgdChrome" x1="0" y1="0" x2="0" y2="17.5" gradientUnits="userSpaceOnUse">
+	      <stop offset="0"     stop-color="#aeb3bb"/>
+	      <stop offset="0.286" stop-color="#dee3e9"/>
+	      <stop offset="0.600" stop-color="#bcc1c9"/>
+	      <stop offset="0.800" stop-color="#d5dae1"/>
+	      <stop offset="0.845" stop-color="#cbd0d7"/>
+	      <stop offset="0.900" stop-color="#a1a5ad"/>
+	      <stop offset="0.965" stop-color="#9da1a9"/>
+	      <stop offset="1"     stop-color="#8c9097"/>
+	    </linearGradient>
+	    <linearGradient id="bgdTopShadow" x1="0" y1="17.5" x2="0" y2="27" gradientUnits="userSpaceOnUse">
+	      <stop offset="0"     stop-color="#000000" stop-opacity="0.57"/>
+	      <stop offset="0.158" stop-color="#000000" stop-opacity="0.506"/>
+	      <stop offset="0.316" stop-color="#000000" stop-opacity="0.459"/>
+	      <stop offset="0.474" stop-color="#000000" stop-opacity="0.407"/>
+	      <stop offset="0.579" stop-color="#000000" stop-opacity="0.320"/>
+	      <stop offset="0.684" stop-color="#000000" stop-opacity="0.238"/>
+	      <stop offset="0.789" stop-color="#000000" stop-opacity="0.147"/>
+	      <stop offset="0.895" stop-color="#000000" stop-opacity="0.065"/>
+	      <stop offset="1"     stop-color="#000000" stop-opacity="0"/>
+	    </linearGradient>
+	  </defs>
+	  <rect x="0" y="0" width="1000" height="17.5" fill="url(#bgdChrome)"/>
+	  <rect x="0" y="17.5" width="1000" height="9.5" fill="url(#bgdTopShadow)"/>
+	</svg>

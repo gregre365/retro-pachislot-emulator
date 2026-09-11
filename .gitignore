@@ -16,6 +16,7 @@
 !/android-project/
 !/benchmarks/
 !/artwork/
+!/tools/
 !/bgfx/
 !/docs/
 !/hash/
@@ -41,6 +42,8 @@
 !/*.md
 !/*.bdf
 !/LICENSE
+!/useroptions.mak
+!/build.ps1
 /.idea
 .vscode
 docs/build

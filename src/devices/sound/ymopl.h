@@ -136,7 +136,7 @@ protected:
 	virtual const tiny_rom_entry *device_rom_region() const override ATTR_COLD;
 
 	// internal state
-	required_region_ptr<u8> m_internal; // internal memory region
+	optional_region_ptr<u8> m_internal; // internal memory region (Retro Pachislot Emulator: unused, see ymopl.cpp)
 };
 
 

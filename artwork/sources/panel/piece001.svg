@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750">
+	  <defs>
+	    <linearGradient id="bgdPaper" x1="0" y1="0" x2="0" y2="750" gradientUnits="userSpaceOnUse">
+	      <stop offset="0"    stop-color="#b9a89f"/>
+	      <stop offset="0.25" stop-color="#bcada3"/>
+	      <stop offset="0.45" stop-color="#bfb0a6"/>
+	      <stop offset="1"    stop-color="#c2b2a8"/>
+	    </linearGradient>
+	  </defs>
+	  <rect x="0" y="0" width="1000" height="750" fill="url(#bgdPaper)"/>
+	</svg>

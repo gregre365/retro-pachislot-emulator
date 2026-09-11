@@ -1,0 +1,18 @@
+// license:BSD-3-Clause
+// copyright-holders:Aaron Giles, gregre365
+//============================================================
+//
+//  wildcats.rc - Win32 resources for the Retro Pachislot Emulator
+//  build (SUBTARGET=wildcats).  Picked up automatically by
+//  scripts/src/main.lua in place of mame.rc.
+//
+//  retropachislotemu.ico holds 256/48/32 px rendered from
+//  retropachislotemu.svg, 24/20 px rendered from
+//  retropachislotemu_small.svg, and the hand-drawn 16 px
+//  retropachislotemu_16.png.
+//
+//============================================================
+
+1                       24      MOVEABLE PURE   "retropachislotemu.man"
+
+2                       ICON    DISCARDABLE     "retropachislotemu.ico"

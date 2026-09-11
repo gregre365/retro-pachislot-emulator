@@ -1,0 +1,1752 @@
+{
+  "asset_dir": "../../artwork",
+  "scale": 2,
+  "canvas": {
+    "file": "sources/panel/piece001.svg",
+    "width": 1000.0,
+    "height": 750.0
+  },
+  "pieces": [
+    {
+      "file": "sources/panel/piece002.svg",
+      "x": 0.0,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece003.svg",
+      "x": 86.25,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece004.svg",
+      "x": 172.5,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece005.svg",
+      "x": 258.75,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece006.svg",
+      "x": 345.0,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece007.svg",
+      "x": 431.25,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece008.svg",
+      "x": 517.5,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece009.svg",
+      "x": 603.75,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece010.svg",
+      "x": 690.0,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece011.svg",
+      "x": 776.25,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece012.svg",
+      "x": 862.5,
+      "y": 19.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece013.svg",
+      "x": 948.75,
+      "y": 19.6,
+      "w": 51.25,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece014.svg",
+      "x": 0.0,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece015.svg",
+      "x": 86.25,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece016.svg",
+      "x": 172.5,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece017.svg",
+      "x": 258.75,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece018.svg",
+      "x": 345.0,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece019.svg",
+      "x": 431.25,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece020.svg",
+      "x": 517.5,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece021.svg",
+      "x": 603.75,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece022.svg",
+      "x": 690.0,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece023.svg",
+      "x": 776.25,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece024.svg",
+      "x": 862.5,
+      "y": 76.4,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece025.svg",
+      "x": 948.75,
+      "y": 76.4,
+      "w": 51.25,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece026.svg",
+      "x": 0.0,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece027.svg",
+      "x": 86.25,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece028.svg",
+      "x": 172.5,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece029.svg",
+      "x": 258.75,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece030.svg",
+      "x": 345.0,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece031.svg",
+      "x": 431.25,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece032.svg",
+      "x": 517.5,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece033.svg",
+      "x": 603.75,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece034.svg",
+      "x": 690.0,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece035.svg",
+      "x": 776.25,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece036.svg",
+      "x": 862.5,
+      "y": 133.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece037.svg",
+      "x": 948.75,
+      "y": 133.2,
+      "w": 51.25,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece038.svg",
+      "x": 0.0,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece039.svg",
+      "x": 86.25,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece040.svg",
+      "x": 172.5,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece041.svg",
+      "x": 258.75,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece042.svg",
+      "x": 345.0,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece043.svg",
+      "x": 431.25,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece044.svg",
+      "x": 517.5,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece045.svg",
+      "x": 603.75,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece046.svg",
+      "x": 690.0,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece047.svg",
+      "x": 776.25,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece048.svg",
+      "x": 862.5,
+      "y": 189.99999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece049.svg",
+      "x": 948.75,
+      "y": 189.99999999999997,
+      "w": 51.25,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece050.svg",
+      "x": 0.0,
+      "y": 33.8,
+      "w": 13.1125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece051.svg",
+      "x": 21.5625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece052.svg",
+      "x": 107.8125,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece053.svg",
+      "x": 194.0625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece054.svg",
+      "x": 280.3125,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece055.svg",
+      "x": 366.5625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece056.svg",
+      "x": 452.8125,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece057.svg",
+      "x": 539.0625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece058.svg",
+      "x": 625.3125,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece059.svg",
+      "x": 711.5625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece060.svg",
+      "x": 797.8125,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece061.svg",
+      "x": 884.0625,
+      "y": 33.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece062.svg",
+      "x": 970.3125,
+      "y": 33.8,
+      "w": 29.6875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece063.svg",
+      "x": 0.0,
+      "y": 90.6,
+      "w": 13.1125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece064.svg",
+      "x": 21.5625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece065.svg",
+      "x": 107.8125,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece066.svg",
+      "x": 194.0625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece067.svg",
+      "x": 280.3125,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece068.svg",
+      "x": 366.5625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece069.svg",
+      "x": 452.8125,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece070.svg",
+      "x": 539.0625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece071.svg",
+      "x": 625.3125,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece072.svg",
+      "x": 711.5625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece073.svg",
+      "x": 797.8125,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece074.svg",
+      "x": 884.0625,
+      "y": 90.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece075.svg",
+      "x": 970.3125,
+      "y": 90.6,
+      "w": 29.6875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece076.svg",
+      "x": 0.0,
+      "y": 147.39999999999998,
+      "w": 13.1125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece077.svg",
+      "x": 21.5625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece078.svg",
+      "x": 107.8125,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece079.svg",
+      "x": 194.0625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece080.svg",
+      "x": 280.3125,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece081.svg",
+      "x": 366.5625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece082.svg",
+      "x": 452.8125,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece083.svg",
+      "x": 539.0625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece084.svg",
+      "x": 625.3125,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece085.svg",
+      "x": 711.5625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece086.svg",
+      "x": 797.8125,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece087.svg",
+      "x": 884.0625,
+      "y": 147.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece088.svg",
+      "x": 970.3125,
+      "y": 147.39999999999998,
+      "w": 29.6875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece089.svg",
+      "x": 0.0,
+      "y": 204.2,
+      "w": 13.1125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece090.svg",
+      "x": 21.5625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece091.svg",
+      "x": 107.8125,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece092.svg",
+      "x": 194.0625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece093.svg",
+      "x": 280.3125,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece094.svg",
+      "x": 366.5625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece095.svg",
+      "x": 452.8125,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece096.svg",
+      "x": 539.0625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece097.svg",
+      "x": 625.3125,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece098.svg",
+      "x": 711.5625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece099.svg",
+      "x": 797.8125,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece100.svg",
+      "x": 884.0625,
+      "y": 204.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece101.svg",
+      "x": 970.3125,
+      "y": 204.2,
+      "w": 29.6875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece102.svg",
+      "x": 0.0,
+      "y": 48.0,
+      "w": 34.675,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece103.svg",
+      "x": 43.125,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece104.svg",
+      "x": 129.375,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece105.svg",
+      "x": 215.625,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece106.svg",
+      "x": 301.875,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece107.svg",
+      "x": 388.125,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece108.svg",
+      "x": 474.375,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece109.svg",
+      "x": 560.625,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece110.svg",
+      "x": 646.875,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece111.svg",
+      "x": 733.125,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece112.svg",
+      "x": 819.375,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece113.svg",
+      "x": 905.625,
+      "y": 48.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece114.svg",
+      "x": 991.875,
+      "y": 48.0,
+      "w": 8.125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece115.svg",
+      "x": 0.0,
+      "y": 104.8,
+      "w": 34.675,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece116.svg",
+      "x": 43.125,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece117.svg",
+      "x": 129.375,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece118.svg",
+      "x": 215.625,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece119.svg",
+      "x": 301.875,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece120.svg",
+      "x": 388.125,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece121.svg",
+      "x": 474.375,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece122.svg",
+      "x": 560.625,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece123.svg",
+      "x": 646.875,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece124.svg",
+      "x": 733.125,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece125.svg",
+      "x": 819.375,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece126.svg",
+      "x": 905.625,
+      "y": 104.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece127.svg",
+      "x": 991.875,
+      "y": 104.8,
+      "w": 8.125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece128.svg",
+      "x": 0.0,
+      "y": 161.6,
+      "w": 34.675,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece129.svg",
+      "x": 43.125,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece130.svg",
+      "x": 129.375,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece131.svg",
+      "x": 215.625,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece132.svg",
+      "x": 301.875,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece133.svg",
+      "x": 388.125,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece134.svg",
+      "x": 474.375,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece135.svg",
+      "x": 560.625,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece136.svg",
+      "x": 646.875,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece137.svg",
+      "x": 733.125,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece138.svg",
+      "x": 819.375,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece139.svg",
+      "x": 905.625,
+      "y": 161.6,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece140.svg",
+      "x": 991.875,
+      "y": 161.6,
+      "w": 8.125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece141.svg",
+      "x": 0.0,
+      "y": 218.39999999999998,
+      "w": 34.675,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece142.svg",
+      "x": 43.125,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece143.svg",
+      "x": 129.375,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece144.svg",
+      "x": 215.625,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece145.svg",
+      "x": 301.875,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece146.svg",
+      "x": 388.125,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece147.svg",
+      "x": 474.375,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece148.svg",
+      "x": 560.625,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece149.svg",
+      "x": 646.875,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece150.svg",
+      "x": 733.125,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece151.svg",
+      "x": 819.375,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece152.svg",
+      "x": 905.625,
+      "y": 218.39999999999998,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece153.svg",
+      "x": 991.875,
+      "y": 218.39999999999998,
+      "w": 8.125,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece154.svg",
+      "x": 0.0,
+      "y": 62.2,
+      "w": 56.2375,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece155.svg",
+      "x": 64.6875,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece156.svg",
+      "x": 150.9375,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece157.svg",
+      "x": 237.1875,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece158.svg",
+      "x": 323.4375,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece159.svg",
+      "x": 409.6875,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece160.svg",
+      "x": 495.9375,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece161.svg",
+      "x": 582.1875,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece162.svg",
+      "x": 668.4375,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece163.svg",
+      "x": 754.6875,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece164.svg",
+      "x": 840.9375,
+      "y": 62.2,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece165.svg",
+      "x": 928.125,
+      "y": 62.2,
+      "w": 71.875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece166.svg",
+      "x": 0.0,
+      "y": 119.0,
+      "w": 56.2375,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece167.svg",
+      "x": 64.6875,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece168.svg",
+      "x": 150.9375,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece169.svg",
+      "x": 237.1875,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece170.svg",
+      "x": 323.4375,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece171.svg",
+      "x": 409.6875,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece172.svg",
+      "x": 495.9375,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece173.svg",
+      "x": 582.1875,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece174.svg",
+      "x": 668.4375,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece175.svg",
+      "x": 754.6875,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece176.svg",
+      "x": 840.9375,
+      "y": 119.0,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece177.svg",
+      "x": 928.125,
+      "y": 119.0,
+      "w": 71.875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece178.svg",
+      "x": 0.0,
+      "y": 175.8,
+      "w": 56.2375,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece179.svg",
+      "x": 64.6875,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece180.svg",
+      "x": 150.9375,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece181.svg",
+      "x": 237.1875,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece182.svg",
+      "x": 323.4375,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece183.svg",
+      "x": 409.6875,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece184.svg",
+      "x": 495.9375,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece185.svg",
+      "x": 582.1875,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece186.svg",
+      "x": 668.4375,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece187.svg",
+      "x": 754.6875,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece188.svg",
+      "x": 840.9375,
+      "y": 175.8,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece189.svg",
+      "x": 928.125,
+      "y": 175.8,
+      "w": 71.875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece190.svg",
+      "x": 0.0,
+      "y": 232.59999999999997,
+      "w": 56.2375,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece191.svg",
+      "x": 64.6875,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece192.svg",
+      "x": 150.9375,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece193.svg",
+      "x": 237.1875,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece194.svg",
+      "x": 323.4375,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece195.svg",
+      "x": 409.6875,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece196.svg",
+      "x": 495.9375,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece197.svg",
+      "x": 582.1875,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece198.svg",
+      "x": 668.4375,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece199.svg",
+      "x": 754.6875,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece200.svg",
+      "x": 840.9375,
+      "y": 232.59999999999997,
+      "w": 77.8,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece201.svg",
+      "x": 928.125,
+      "y": 232.59999999999997,
+      "w": 71.875,
+      "h": 11.0
+    },
+    {
+      "file": "sources/panel/piece202.svg",
+      "x": 0.0,
+      "y": 0.0,
+      "w": 20.0,
+      "h": 750.0
+    },
+    {
+      "file": "sources/panel/piece203.svg",
+      "x": 975.0,
+      "y": 0.0,
+      "w": 25.0,
+      "h": 750.0
+    },
+    {
+      "file": "sources/panel/piece204.svg",
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1000.0,
+      "h": 27.0
+    },
+    {
+      "file": "sources/panel/piece205.svg",
+      "x": 0.0,
+      "y": 712.0,
+      "w": 1000.0,
+      "h": 38.0
+    },
+    {
+      "file": "sources/wc_tp_bigsmall.png",
+      "x": 44.0,
+      "y": 27.0,
+      "w": 212.0,
+      "h": 172.0
+    },
+    {
+      "file": "sources/wc_tp_paytable.png",
+      "x": 772.0,
+      "y": 28.0,
+      "w": 199.0,
+      "h": 162.0
+    },
+    {
+      "file": "sources/panel/piece207.svg",
+      "x": 148.0,
+      "y": 212.0,
+      "w": 740.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/panel/piece208.svg",
+      "x": 316.1,
+      "y": 210.3,
+      "w": 390.8,
+      "h": 84.9
+    },
+    {
+      "file": "sources/panel/piece210.svg",
+      "x": 198.0,
+      "y": 294.9,
+      "w": 565.0,
+      "h": 344.7
+    },
+    {
+      "file": "sources/panel/piece211.svg",
+      "x": 199.5,
+      "y": 368.0,
+      "w": 562.0,
+      "h": 214.0
+    },
+    {
+      "file": "sources/panel/piece212.svg",
+      "x": 142.6,
+      "y": 313.1,
+      "w": 68.0,
+      "h": 68.0
+    },
+    {
+      "file": "sources/panel/piece213.svg",
+      "x": 142.6,
+      "y": 379.9,
+      "w": 68.0,
+      "h": 68.0
+    },
+    {
+      "file": "sources/panel/piece214.svg",
+      "x": 142.6,
+      "y": 446.7,
+      "w": 68.0,
+      "h": 68.0
+    },
+    {
+      "file": "sources/panel/piece215.svg",
+      "x": 142.6,
+      "y": 513.5,
+      "w": 68.0,
+      "h": 68.0
+    },
+    {
+      "file": "sources/panel/piece216.svg",
+      "x": 142.6,
+      "y": 580.3,
+      "w": 68.0,
+      "h": 68.0
+    },
+    {
+      "file": "sources/panel/piece217.svg",
+      "x": 745.7,
+      "y": 303.9,
+      "w": 70.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/panel/piece218.svg",
+      "x": 745.7,
+      "y": 369.8,
+      "w": 70.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/panel/piece219.svg",
+      "x": 745.7,
+      "y": 435.7,
+      "w": 70.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/panel/piece220.svg",
+      "x": 745.7,
+      "y": 501.6,
+      "w": 70.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/panel/piece221.svg",
+      "x": 745.7,
+      "y": 567.5,
+      "w": 70.0,
+      "h": 70.0
+    },
+    {
+      "file": "sources/wc_pl_plate3_base.png",
+      "x": 24.4,
+      "y": 317.6,
+      "w": 125.3,
+      "h": 59.0
+    },
+    {
+      "file": "sources/wc_pl_plate2_base.png",
+      "x": 24.4,
+      "y": 384.4,
+      "w": 125.3,
+      "h": 59.0
+    },
+    {
+      "file": "sources/wc_pl_plate1_base.png",
+      "x": 24.4,
+      "y": 451.2,
+      "w": 125.3,
+      "h": 59.0
+    },
+    {
+      "file": "sources/wc_pl_plate2_base.png",
+      "x": 24.4,
+      "y": 518.0,
+      "w": 125.3,
+      "h": 59.0
+    },
+    {
+      "file": "sources/wc_pl_plate3_base.png",
+      "x": 24.4,
+      "y": 584.8,
+      "w": 125.3,
+      "h": 59.0
+    },
+    {
+      "file": "sources/wc_pl_credit_base.png",
+      "x": 21.8,
+      "y": 647.8,
+      "w": 176.4,
+      "h": 70.2
+    },
+    {
+      "file": "sources/wc_st_stop_base.png",
+      "x": 224,
+      "y": 626,
+      "w": 113,
+      "h": 84
+    },
+    {
+      "file": "sources/wc_st_stop_base.png",
+      "x": 426,
+      "y": 626,
+      "w": 113,
+      "h": 84
+    },
+    {
+      "file": "sources/wc_st_stop_base.png",
+      "x": 628,
+      "y": 626,
+      "w": 113,
+      "h": 84
+    },
+    {
+      "file": "sources/wc_tu_lower_base.png",
+      "x": 812.5,
+      "y": 470.5,
+      "w": 200,
+      "h": 200
+    },
+    {
+      "file": "sources/wc_tu_upper_base.png",
+      "x": 812.5,
+      "y": 470.5,
+      "w": 200,
+      "h": 200
+    },
+    {
+      "file": "sources/wc_tu_dot.png",
+      "x": 812.5,
+      "y": 470.5,
+      "w": 200,
+      "h": 200
+    },
+    {
+      "file": "sources/wc_ct_badge.png",
+      "x": 822.0,
+      "y": 302.0,
+      "w": 170.0,
+      "h": 173.0
+    },
+    {
+      "file": "sources/wc_tp_catsticker.png",
+      "x": 287,
+      "y": 44,
+      "w": 98,
+      "h": 123
+    },
+    {
+      "file": "sources/wc_tp_seven_red_off.png",
+      "x": 402,
+      "y": 54,
+      "w": 100,
+      "h": 112
+    },
+    {
+      "file": "sources/wc_tp_seven_yellow_off.png",
+      "x": 522,
+      "y": 54,
+      "w": 100,
+      "h": 112
+    },
+    {
+      "file": "sources/wc_tp_seven_blue_off.png",
+      "x": 642,
+      "y": 54,
+      "w": 100,
+      "h": 112
+    },
+    {
+      "type": "cutout",
+      "x": 221,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "type": "cutout",
+      "x": 426,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "type": "cutout",
+      "x": 631,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "file": "sources/wc_rw_shade.png",
+      "x": 221,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "file": "sources/wc_rw_shade.png",
+      "x": 426,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "file": "sources/wc_rw_shade.png",
+      "x": 631,
+      "y": 341.5,
+      "w": 109,
+      "h": 267
+    },
+    {
+      "file": "sources/wc_rw_frame.png",
+      "x": 210,
+      "y": 330.5,
+      "w": 131,
+      "h": 289
+    },
+    {
+      "file": "sources/wc_rw_frame.png",
+      "x": 415,
+      "y": 330.5,
+      "w": 131,
+      "h": 289
+    },
+    {
+      "file": "sources/wc_rw_frame.png",
+      "x": 620,
+      "y": 330.5,
+      "w": 131,
+      "h": 289
+    },
+    {
+      "file": "sources/wc_rw_paylines.png",
+      "x": 199.5,
+      "y": 375,
+      "w": 562,
+      "h": 200
+    },
+    {
+      "file": "sources/wc_ms_medalslot.svg",
+      "x": 830,
+      "y": 684,
+      "w": 162,
+      "h": 64
+    }
+  ],
+  "final_size": {
+    "width": 2000,
+    "height": 1500
+  },
+  "output": "wc_panel_bg.png"
+}

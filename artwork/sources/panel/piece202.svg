@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="750" viewBox="0 0 20 750">
+	  <defs>
+	    <linearGradient id="bgdEdgeL" x1="0" y1="0" x2="20" y2="0" gradientUnits="userSpaceOnUse">
+	      <stop offset="0"     stop-color="#000000" stop-opacity="0.10"/>
+	      <stop offset="0.100" stop-color="#000000" stop-opacity="0.03"/>
+	      <stop offset="0.175" stop-color="#ffffff" stop-opacity="0"/>
+	      <stop offset="0.400" stop-color="#ffffff" stop-opacity="0.022"/>
+	      <stop offset="0.700" stop-color="#ffffff" stop-opacity="0.004"/>
+	      <stop offset="1"     stop-color="#ffffff" stop-opacity="0"/>
+	    </linearGradient>
+	  </defs>
+	  <rect x="0" y="0" width="20" height="750" fill="url(#bgdEdgeL)"/>
+	</svg>

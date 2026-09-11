@@ -23,6 +23,12 @@ end
 	project (projname)
 	uuid (os.uuid(_target .. "_" .. _subtarget))
 	kind "ConsoleApp"
+	-- Keep project identities and shared PCH paths unchanged when naming the binary.
+	local exename = projname
+	if _target == "mame" and _subtarget == "wildcats" then
+		exename = "retropachislotemu"
+		targetname(exename)
+	end
 
 	configuration { "android*" }
 		targetprefix "lib"
@@ -212,7 +218,6 @@ end
 	override_resources = false;
 
 	maintargetosdoptions(_target, _subtarget)
-	local exename = projname -- FIXME: should include the OSD prefix if any
 
 	includedirs {
 		MAME_DIR .. "src/osd",

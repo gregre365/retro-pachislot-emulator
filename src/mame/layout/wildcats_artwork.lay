@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<!--
+license:CC0
+copyright-holders:gregre365
+
+    Wild Cats (ARK TECHNICO, 1991) - artwork layout.
+
+    Every visible part is a plain image under artwork/, so the look can be
+    changed by editing images alone:
+
+    - Parts that never change at runtime are flattened into a few
+      background images (wc_panel_bg.png, wc_cp_bg.png, wc_tl_bg.png,
+      wc_lp_panel.png).  wc_panel_bg.png and wc_cp_bg.png are rebuilt from
+      the individual pieces in artwork/sources/ with
+          tools/compose_artwork.py tools/manifests/<name>.json
+    - Lamps are separate elements that only draw their lit image on top of
+      the background; their unlit look is part of the background.
+    - Reel symbols are the wc_<symbol>[_aaa].png images.
+-->
+<mamelayout version="2">
+
+	<!-- ===== panel ===== -->
+
+	<!-- Static glass panel: wallpaper, BIG/SMALL BONUS card, paytable, bonus
+	     game band, reel window frame and paylines, unlit payline plates,
+	     CREDIT plate, STOP badges, CREDIT counter frame, TIME UP / INSERT
+	     MEDAL bars and the medal slot.  The reel windows are transparent so
+	     the reels drawn behind it show through. -->
+	<element name="panel_bg">
+		<image file="wc_panel_bg.png">
+			<bounds x="0" y="0" width="1000" height="750" />
+		</image>
+	</element>
+
+	<element name="tp_catsticker" defstate="0">
+		<image state="1" file="wc_tp_catsticker_lit.png">
+			<bounds x="0" y="0" width="100" height="126" />
+		</image>
+	</element>
+
+	<element name="tp_seven_red" defstate="0">
+		<image state="1" file="wc_tp_seven_red_on.png">
+			<bounds x="0" y="0" width="100" height="112" />
+		</image>
+	</element>
+	<element name="tp_seven_yellow" defstate="0">
+		<image state="1" file="wc_tp_seven_yellow_on.png">
+			<bounds x="0" y="0" width="100" height="112" />
+		</image>
+	</element>
+	<element name="tp_seven_blue" defstate="0">
+		<image state="1" file="wc_tp_seven_blue_on.png">
+			<bounds x="0" y="0" width="100" height="112" />
+		</image>
+	</element>
+
+	<!-- Reel strips: 21 symbols, top to bottom in the driver's symbol order.
+	     The trailing comment on each line is the symbol index and name. -->
+	<element name="rw_strip1">
+		<rect><bounds x="0" y="0" width="109" height="1470" /><color red="1.0" green="1.0" blue="1.0" /></rect>
+		<image file="wc_orange_aaa.png"><bounds x="9.95" y="0" width="89.09" height="70" /></image><!--  0 O AAA -->
+		<image file="wc_plum.png"><bounds x="9.95" y="70" width="89.09" height="70" /></image><!--  1 P -->
+		<image file="wc_seven.png"><bounds x="9.95" y="140" width="89.09" height="70" /></image><!--  2 777 -->
+		<image file="wc_neko.png"><bounds x="9.95" y="210" width="89.09" height="70" /></image><!--  3 CAT -->
+		<image file="wc_cherry.png"><bounds x="9.95" y="280" width="89.09" height="70" /></image><!--  4 C -->
+		<image file="wc_lemon_aaa.png"><bounds x="9.95" y="350" width="89.09" height="70" /></image><!--  5 L AAA -->
+		<image file="wc_neko.png"><bounds x="9.95" y="420" width="89.09" height="70" /></image><!--  6 CAT -->
+		<image file="wc_bell.png"><bounds x="9.95" y="490" width="89.09" height="70" /></image><!--  7 B -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="560" width="89.09" height="70" /></image><!--  8 L -->
+		<image file="wc_orange_aaa.png"><bounds x="9.95" y="630" width="89.09" height="70" /></image><!--  9 O AAA -->
+		<image file="wc_plum.png"><bounds x="9.95" y="700" width="89.09" height="70" /></image><!-- 10 P -->
+		<image file="wc_seven.png"><bounds x="9.95" y="770" width="89.09" height="70" /></image><!-- 11 777 -->
+		<image file="wc_neko.png"><bounds x="9.95" y="840" width="89.09" height="70" /></image><!-- 12 CAT -->
+		<image file="wc_cherry.png"><bounds x="9.95" y="910" width="89.09" height="70" /></image><!-- 13 C -->
+		<image file="wc_orange_aaa.png"><bounds x="9.95" y="980" width="89.09" height="70" /></image><!-- 14 O AAA -->
+		<image file="wc_neko.png"><bounds x="9.95" y="1050" width="89.09" height="70" /></image><!-- 15 CAT -->
+		<image file="wc_bell.png"><bounds x="9.95" y="1120" width="89.09" height="70" /></image><!-- 16 B -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="1190" width="89.09" height="70" /></image><!-- 17 L -->
+		<image file="wc_neko_aaa.png"><bounds x="9.95" y="1260" width="89.09" height="70" /></image><!-- 18 CAT AAA -->
+		<image file="wc_seven.png"><bounds x="9.95" y="1330" width="89.09" height="70" /></image><!-- 19 777 -->
+		<image file="wc_neko.png"><bounds x="9.95" y="1400" width="89.09" height="70" /></image><!-- 20 CAT -->
+	</element>
+	<element name="rw_strip2">
+		<rect><bounds x="0" y="0" width="109" height="1470" /><color red="1.0" green="1.0" blue="1.0" /></rect>
+		<image file="wc_plum.png"><bounds x="9.95" y="0" width="89.09" height="70" /></image><!--  0 P -->
+		<image file="wc_bell.png"><bounds x="9.95" y="70" width="89.09" height="70" /></image><!--  1 B -->
+		<image file="wc_orange.png"><bounds x="9.95" y="140" width="89.09" height="70" /></image><!--  2 O -->
+		<image file="wc_lemon_aaa.png"><bounds x="9.95" y="210" width="89.09" height="70" /></image><!--  3 L AAA -->
+		<image file="wc_seven.png"><bounds x="9.95" y="280" width="89.09" height="70" /></image><!--  4 777 -->
+		<image file="wc_plum.png"><bounds x="9.95" y="350" width="89.09" height="70" /></image><!--  5 P -->
+		<image file="wc_bell.png"><bounds x="9.95" y="420" width="89.09" height="70" /></image><!--  6 B -->
+		<image file="wc_orange.png"><bounds x="9.95" y="490" width="89.09" height="70" /></image><!--  7 O -->
+		<image file="wc_lemon_aaa.png"><bounds x="9.95" y="560" width="89.09" height="70" /></image><!--  8 L AAA -->
+		<image file="wc_neko.png"><bounds x="9.95" y="630" width="89.09" height="70" /></image><!--  9 CAT -->
+		<image file="wc_plum.png"><bounds x="9.95" y="700" width="89.09" height="70" /></image><!-- 10 P -->
+		<image file="wc_bell.png"><bounds x="9.95" y="770" width="89.09" height="70" /></image><!-- 11 B -->
+		<image file="wc_orange.png"><bounds x="9.95" y="840" width="89.09" height="70" /></image><!-- 12 O -->
+		<image file="wc_lemon_aaa.png"><bounds x="9.95" y="910" width="89.09" height="70" /></image><!-- 13 L AAA -->
+		<image file="wc_seven.png"><bounds x="9.95" y="980" width="89.09" height="70" /></image><!-- 14 777 -->
+		<image file="wc_plum.png"><bounds x="9.95" y="1050" width="89.09" height="70" /></image><!-- 15 P -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="1120" width="89.09" height="70" /></image><!-- 16 B AAA -->
+		<image file="wc_orange.png"><bounds x="9.95" y="1190" width="89.09" height="70" /></image><!-- 17 O -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="1260" width="89.09" height="70" /></image><!-- 18 L -->
+		<image file="wc_plum.png"><bounds x="9.95" y="1330" width="89.09" height="70" /></image><!-- 19 P -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="1400" width="89.09" height="70" /></image><!-- 20 B AAA -->
+	</element>
+	<element name="rw_strip3">
+		<rect><bounds x="0" y="0" width="109" height="1470" /><color red="1.0" green="1.0" blue="1.0" /></rect>
+		<image file="wc_orange.png"><bounds x="9.95" y="0" width="89.09" height="70" /></image><!--  0 O -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="70" width="89.09" height="70" /></image><!--  1 B AAA -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="140" width="89.09" height="70" /></image><!--  2 L -->
+		<image file="wc_plum.png"><bounds x="9.95" y="210" width="89.09" height="70" /></image><!--  3 P -->
+		<image file="wc_orange_aaa.png"><bounds x="9.95" y="280" width="89.09" height="70" /></image><!--  4 O AAA -->
+		<image file="wc_bell.png"><bounds x="9.95" y="350" width="89.09" height="70" /></image><!--  5 B -->
+		<image file="wc_plum.png"><bounds x="9.95" y="420" width="89.09" height="70" /></image><!--  6 P -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="490" width="89.09" height="70" /></image><!--  7 L -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="560" width="89.09" height="70" /></image><!--  8 B AAA -->
+		<image file="wc_orange.png"><bounds x="9.95" y="630" width="89.09" height="70" /></image><!--  9 O -->
+		<image file="wc_neko.png"><bounds x="9.95" y="700" width="89.09" height="70" /></image><!-- 10 CAT -->
+		<image file="wc_plum.png"><bounds x="9.95" y="770" width="89.09" height="70" /></image><!-- 11 P -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="840" width="89.09" height="70" /></image><!-- 12 L -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="910" width="89.09" height="70" /></image><!-- 13 B AAA -->
+		<image file="wc_orange.png"><bounds x="9.95" y="980" width="89.09" height="70" /></image><!-- 14 O -->
+		<image file="wc_seven.png"><bounds x="9.95" y="1050" width="89.09" height="70" /></image><!-- 15 777 -->
+		<image file="wc_plum.png"><bounds x="9.95" y="1120" width="89.09" height="70" /></image><!-- 16 P -->
+		<image file="wc_lemon.png"><bounds x="9.95" y="1190" width="89.09" height="70" /></image><!-- 17 L -->
+		<image file="wc_bell_aaa.png"><bounds x="9.95" y="1260" width="89.09" height="70" /></image><!-- 18 B AAA -->
+		<image file="wc_orange.png"><bounds x="9.95" y="1330" width="89.09" height="70" /></image><!-- 19 O -->
+		<image file="wc_plum.png"><bounds x="9.95" y="1400" width="89.09" height="70" /></image><!-- 20 P -->
+	</element>
+
+	<element name="pl_plate3_glow" defstate="0">
+		<image state="1" file="wc_pl_plate3_glow_on.png">
+			<bounds x="0" y="0" width="256" height="120" />
+		</image>
+	</element>
+	<element name="pl_plate2_glow" defstate="0">
+		<image state="1" file="wc_pl_plate2_glow_on.png">
+			<bounds x="0" y="0" width="256" height="120" />
+		</image>
+	</element>
+	<element name="pl_plate1_glow" defstate="0">
+		<image state="1" file="wc_pl_plate1_glow_on.png">
+			<bounds x="0" y="0" width="256" height="120" />
+		</image>
+	</element>
+
+	<element name="pl_credit_glow" defstate="0">
+		<image state="1" file="wc_pl_credit_glow_on.png">
+			<bounds x="0" y="0" width="352" height="140" />
+		</image>
+	</element>
+
+	<element name="st_stop_glow" defstate="0">
+		<image state="1" file="wc_st_stop_glow_on.png">
+			<bounds x="0" y="0" width="226" height="168" />
+		</image>
+	</element>
+
+	<element name="ct_digit">
+		<led7seg><color red="1.0" green="0.13" blue="0.09" /></led7seg>
+	</element>
+
+	<!-- TIME UP / INSERT MEDAL: lower half is INSERT MEDAL, upper half is
+	     TIME UP. -->
+	<element name="tu_lower_glow" defstate="0">
+		<image state="1" file="wc_tu_lower_glow_on.png">
+			<bounds x="0" y="0" width="400" height="400" />
+		</image>
+	</element>
+	<element name="tu_upper_glow" defstate="0">
+		<image state="1" file="wc_tu_upper_glow_on.png">
+			<bounds x="0" y="0" width="400" height="400" />
+		</image>
+	</element>
+
+	<!-- ===== top lamp ===== -->
+
+	<element name="tl_backing">
+		<rect><color red="0.055" green="0.028" blue="0.022" /></rect>
+	</element>
+	<!-- Unlit bulb strip. -->
+	<element name="tl_bg">
+		<image file="wc_tl_bg.png">
+			<bounds x="0" y="0" width="1000" height="112" />
+		</image>
+	</element>
+	<element name="tl_strip" defstate="0">
+		<image state="1" file="wc_tl_strip_on.png">
+			<bounds x="0" y="0" width="1000" height="112" />
+		</image>
+	</element>
+
+	<!-- ===== control panel ===== -->
+
+	<!-- Static control panel: knob, stop buttons and their plate, bet
+	     buttons, door lock, etc. -->
+	<element name="cp_bg">
+		<image file="wc_cp_bg.png">
+			<bounds x="0" y="0" width="1000" height="202" />
+		</image>
+	</element>
+
+	<!-- ===== lower panel ===== -->
+
+	<!-- Static lower glass panel. -->
+	<element name="lp_panel">
+		<image file="wc_lp_panel.png">
+			<bounds x="0" y="0" width="1000" height="348" />
+		</image>
+	</element>
+
+	<!-- ===== debug overlay ===== -->
+
+	<element name="dbg_backdrop">
+		<rect><bounds x="0" y="0" width="460" height="448" /><color red="0.05" green="0.05" blue="0.06" alpha="0.72" /></rect>
+		<text string="DEBUG OVERLAY" align="1"><bounds x="0" y="4" width="460" height="32" /><color red="0.95" green="0.85" blue="0.30" /></text>
+		<text string="REEL SENSORS" align="0"><bounds x="12" y="44" width="436" height="20" /><color red="0.55" green="0.75" blue="0.95" /></text>
+		<text string="HOPPER" align="0"><bounds x="12" y="142" width="436" height="20" /><color red="0.55" green="0.75" blue="0.95" /></text>
+		<text string="COIN LOCKOUT" align="0"><bounds x="12" y="216" width="436" height="20" /><color red="0.55" green="0.75" blue="0.95" /></text>
+		<text string="HALL COMPUTER TERMINALS" align="0"><bounds x="12" y="266" width="436" height="20" /><color red="0.55" green="0.75" blue="0.95" /></text>
+		<text string="reel_opto0" align="0"><bounds x="40" y="66" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="reel_opto1" align="0"><bounds x="40" y="90" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="reel_opto2" align="0"><bounds x="40" y="114" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="hopper_motor" align="0"><bounds x="40" y="164" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="hopper_sensor" align="0"><bounds x="40" y="188" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="coin_block_solenoid" align="0"><bounds x="40" y="238" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="medal_in_terminal" align="0"><bounds x="40" y="288" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="medal_out_terminal" align="0"><bounds x="40" y="312" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="big_bonus_terminal" align="0"><bounds x="40" y="336" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="jac_terminal" align="0"><bounds x="40" y="360" width="408" height="24" /><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text string="MEDALS IN - OUT (COIN COUNTERS)" align="0"><bounds x="12" y="392" width="436" height="20" /><color red="0.55" green="0.75" blue="0.95" /></text>
+	</element>
+	<!-- sign of inout: 1 when more medals went in than out -->
+	<element name="dbg_inout_sign" defstate="0">
+		<text state="0" string="-" align="2"><color red="0.85" green="0.85" blue="0.85" /></text>
+		<text state="1" string="+" align="2"><color red="0.85" green="0.85" blue="0.85" /></text>
+	</element>
+	<element name="dbg_inout" defstate="0">
+		<simplecounter maxstate="999999" digits="1" align="1"><color red="0.85" green="0.85" blue="0.85" /></simplecounter>
+	</element>
+	<element name="dbg_led" defstate="0">
+		<disk state="0"><color red="0.22" green="0.22" blue="0.24" /></disk>
+		<disk state="1"><color red="0.15" green="0.92" blue="0.30" /></disk>
+	</element>
+
+	<!-- ===== groups ===== -->
+
+	<group name="toplamp">
+		<bounds x="0" y="0" width="1000" height="112" />
+		<element ref="tl_backing"><bounds x="0" y="0" width="1000" height="112" /></element>
+		<element ref="tl_bg"><bounds x="0" y="0" width="1000" height="112" /></element>
+		<element ref="tl_strip" name="top_lamp"><bounds x="0" y="0" width="1000" height="112" /></element>
+	</group>
+
+	<group name="panel">
+		<bounds x="0" y="0" width="1000" height="750" />
+		<!-- Reels first, so panel_bg covers everything except the window
+		     openings. -->
+		<element ref="rw_strip1">
+			<bounds x="221" y="341.5" width="109" height="267" />
+			<yscroll name="reel0:scroll" size="0.1816327" wrap="yes" min="63687" max="129222" />
+		</element>
+		<element ref="rw_strip2">
+			<bounds x="426" y="341.5" width="109" height="267" />
+			<yscroll name="reel1:scroll" size="0.1816327" wrap="yes" min="63687" max="129222" />
+		</element>
+		<element ref="rw_strip3">
+			<bounds x="631" y="341.5" width="109" height="267" />
+			<yscroll name="reel2:scroll" size="0.1816327" wrap="yes" min="63687" max="129222" />
+		</element>
+		<element ref="panel_bg"><bounds x="0" y="0" width="1000" height="750" /></element>
+		<!-- Lamps and LED digits on top of the background. -->
+		<element ref="tp_catsticker" name="cat_lamp"><bounds x="287" y="44" width="98" height="123" /></element>
+		<element ref="tp_seven_red" name="seven_lamp0"><bounds x="402" y="54" width="100" height="112" /></element>
+		<element ref="tp_seven_yellow" name="seven_lamp1"><bounds x="522" y="54" width="100" height="112" /></element>
+		<element ref="tp_seven_blue" name="seven_lamp2"><bounds x="642" y="54" width="100" height="112" /></element>
+		<element ref="pl_plate3_glow" name="payline_lamp3"><bounds x="24.4" y="317.6" width="125.3" height="59.0" /></element>
+		<element ref="pl_plate2_glow" name="payline_lamp1"><bounds x="24.4" y="384.4" width="125.3" height="59.0" /></element>
+		<element ref="pl_plate1_glow" name="payline_lamp0"><bounds x="24.4" y="451.2" width="125.3" height="59.0" /></element>
+		<element ref="pl_plate2_glow" name="payline_lamp2"><bounds x="24.4" y="518.0" width="125.3" height="59.0" /></element>
+		<element ref="pl_plate3_glow" name="payline_lamp4"><bounds x="24.4" y="584.8" width="125.3" height="59.0" /></element>
+		<element ref="pl_credit_glow" name="credit_lamp"><bounds x="21.8" y="647.8" width="176.4" height="70.2" /></element>
+		<repeat count="3">
+			<param name="stx" start="224" increment="202" />
+			<param name="stlamp" start="0" increment="1" />
+			<element name="stop_lamp~stlamp~" ref="st_stop_glow">
+				<bounds x="~stx~" y="626" width="113" height="84" />
+			</element>
+		</repeat>
+		<element ref="ct_digit" name="digit0">
+			<bounds x="911.2" y="344.3" width="24.8" height="35.9" />
+		</element>
+		<element ref="ct_digit" name="digit1">
+			<bounds x="944.2" y="344.3" width="24.8" height="35.9" />
+		</element>
+		<element ref="ct_digit" name="digit2">
+			<bounds x="911.2" y="418.4" width="24.8" height="35.9" />
+		</element>
+		<element ref="ct_digit" name="digit3">
+			<bounds x="944.2" y="418.4" width="24.8" height="35.9" />
+		</element>
+		<element ref="tu_lower_glow" name="insert_medal_lamp"><bounds x="812.5" y="470.5" width="200" height="200" /></element>
+		<element ref="tu_upper_glow" name="time_up_lamp"><bounds x="812.5" y="470.5" width="200" height="200" /></element>
+	</group>
+
+	<group name="controlpanel">
+		<bounds x="0" y="0" width="1000" height="202" />
+		<element ref="cp_bg"><bounds x="0" y="0" width="1000" height="202" /></element>
+	</group>
+
+	<group name="lowerpanel">
+		<bounds x="0" y="0" width="1000" height="348" />
+		<element ref="lp_panel"><bounds x="0" y="0" width="1000" height="348" /></element>
+	</group>
+
+	<group name="debugoverlay">
+		<bounds x="0" y="0" width="460" height="448" />
+		<element ref="dbg_backdrop"><bounds x="0" y="0" width="460" height="448" /></element>
+		<element ref="dbg_led" name="reel_opto0"><bounds x="12" y="69" width="18" height="18" /></element>
+		<element ref="dbg_led" name="reel_opto1"><bounds x="12" y="93" width="18" height="18" /></element>
+		<element ref="dbg_led" name="reel_opto2"><bounds x="12" y="117" width="18" height="18" /></element>
+		<element ref="dbg_led" name="hopper_motor"><bounds x="12" y="167" width="18" height="18" /></element>
+		<element ref="dbg_led" name="hopper_sensor"><bounds x="12" y="191" width="18" height="18" /></element>
+		<element ref="dbg_led" name="coin_block_solenoid"><bounds x="12" y="241" width="18" height="18" /></element>
+		<element ref="dbg_led" name="medal_in_terminal"><bounds x="12" y="291" width="18" height="18" /></element>
+		<element ref="dbg_led" name="medal_out_terminal"><bounds x="12" y="315" width="18" height="18" /></element>
+		<element ref="dbg_led" name="big_bonus_terminal"><bounds x="12" y="339" width="18" height="18" /></element>
+		<element ref="dbg_led" name="jac_terminal"><bounds x="12" y="363" width="18" height="18" /></element>
+		<element ref="dbg_inout_sign" name="inout_sign"><bounds x="12" y="414" width="24" height="24" /></element>
+		<element ref="dbg_inout" name="inout"><bounds x="40" y="414" width="160" height="24" /></element>
+	</group>
+
+	<!-- ===== views ===== -->
+
+	<view name="Wild Cats (cabinet)">
+		<group ref="toplamp">
+			<bounds x="0" y="0" width="1030" height="115" />
+		</group>
+		<group ref="panel">
+			<bounds x="15" y="120" width="1000" height="750" />
+		</group>
+		<group ref="controlpanel">
+			<bounds x="0" y="875" width="1030" height="208" />
+		</group>
+		<group ref="lowerpanel">
+			<bounds x="8" y="1090" width="1014" height="353" />
+		</group>
+	</view>
+
+	<view name="Glass Panel">
+		<group ref="panel">
+			<bounds x="0" y="0" width="1000" height="750" />
+		</group>
+	</view>
+
+	<!-- Developer view: the panel plus an LED for every output that is not
+	     a lamp (reel sensors, hopper, coin lockout, hall computer
+	     terminals) and the medals-in minus medals-out count.  The count
+	     comes from MAME's coin counters, which are kept in the cfg file,
+	     so it is a running total, not just this session. -->
+	<view name="Debug Overlay">
+		<group ref="panel">
+			<bounds x="0" y="0" width="1000" height="750" />
+		</group>
+		<group ref="debugoverlay">
+			<bounds x="1020" y="0" width="460" height="448" />
+		</group>
+	</view>
+
+</mamelayout>

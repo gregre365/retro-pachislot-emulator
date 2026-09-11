@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="38" viewBox="0 0 1000 38">
+	  <defs>
+	    <linearGradient id="bgdBotShadow" x1="0" y1="0" x2="0" y2="38" gradientUnits="userSpaceOnUse">
+	      <stop offset="0.000" stop-color="#000000" stop-opacity="0.000"/>
+	      <stop offset="0.158" stop-color="#000000" stop-opacity="0.011"/>
+	      <stop offset="0.263" stop-color="#000000" stop-opacity="0.029"/>
+	      <stop offset="0.368" stop-color="#000000" stop-opacity="0.034"/>
+	      <stop offset="0.447" stop-color="#000000" stop-opacity="0.051"/>
+	      <stop offset="0.500" stop-color="#000000" stop-opacity="0.086"/>
+	      <stop offset="0.553" stop-color="#000000" stop-opacity="0.109"/>
+	      <stop offset="0.589" stop-color="#000000" stop-opacity="0.131"/>
+	      <stop offset="0.621" stop-color="#000000" stop-opacity="0.143"/>
+	      <stop offset="0.679" stop-color="#000000" stop-opacity="0.074"/>
+	      <stop offset="0.708" stop-color="#000000" stop-opacity="0.069"/>
+	      <stop offset="0.763" stop-color="#000000" stop-opacity="0.109"/>
+	      <stop offset="0.816" stop-color="#000000" stop-opacity="0.149"/>
+	      <stop offset="0.884" stop-color="#000000" stop-opacity="0.160"/>
+	      <stop offset="1.000" stop-color="#000000" stop-opacity="0.155"/>
+	    </linearGradient>
+	  </defs>
+	  <rect x="0" y="0" width="1000" height="38" fill="url(#bgdBotShadow)"/>
+	</svg>
