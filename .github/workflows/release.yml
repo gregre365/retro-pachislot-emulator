@@ -51,6 +51,8 @@ jobs:
 
           x86_64-w64-mingw32-strip -o "${dir}/retropachislotemu.exe" retropachislotemu.exe
           cp -r artwork bgfx hlsl plugins ctrlr keymaps "${dir}/"
+          # not used at run time: artwork source files and the chess drivers' pieces
+          rm -r "${dir}/artwork/sources" "${dir}/artwork/chess"
           cp -r docs/legal "${dir}/docs/"
           find language -name strings.mo | while read -r mo; do
             mkdir -p "${dir}/$(dirname "${mo}")"
