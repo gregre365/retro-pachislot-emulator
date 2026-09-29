@@ -6,6 +6,8 @@
 
 [日本語は下にあります](#日本語)
 
+[Project website / 紹介ページ](https://gregre365.github.io/retro-pachislot-emulator/)
+
 Retro Pachislot Emulator plays classic Japanese pachislot (medal slot)
 machines on a PC, with the whole cabinet drawn on screen: reels, lamps,
 payline plates, credit counter and control panel.
@@ -17,6 +19,7 @@ The cabinet artwork is not a copy of the real machine. Out of respect for the
 copyright in its printed design, all artwork was created for this project and
 differs from the original: the layout of the parts follows the real machine,
 but the illustrations, lettering and symbols are new.
+The artwork was created with the help of AI tools.
 
 ## Why
 
@@ -227,6 +230,7 @@ Retro Pachislot Emulator は、昔のパチスロ実機を PC で遊べるエミ
 筐体のアートワークは実機の複製ではありません。実機に印刷されたデザインの著作権に
 配慮し、すべて本プロジェクト用に作成したもので、実機とは異なります。部品の配置は
 実機に合わせていますが、イラスト、文字、図柄は新しく描き起こしたものです。
+アートワークの制作には AI ツールを使用しています。
 
 ## このプロジェクトについて
 
